@@ -15,7 +15,7 @@ export class StateMachine extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'sfn.services.k8s.aws/v1alpha1',
     kind: 'StateMachine',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "StateMachine".

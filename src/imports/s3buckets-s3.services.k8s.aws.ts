@@ -15,7 +15,7 @@ export class Bucket extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 's3.services.k8s.aws/v1alpha1',
     kind: 'Bucket',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "Bucket".

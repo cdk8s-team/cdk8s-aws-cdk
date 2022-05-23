@@ -15,7 +15,7 @@ export class Role extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'iam.services.k8s.aws/v1alpha1',
     kind: 'Role',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "Role".

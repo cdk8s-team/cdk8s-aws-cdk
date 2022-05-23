@@ -15,7 +15,7 @@ export class Table extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'dynamodb.services.k8s.aws/v1alpha1',
     kind: 'Table',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "Table".

@@ -15,7 +15,7 @@ export class DbInstance extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'rds.services.k8s.aws/v1alpha1',
     kind: 'DBInstance',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "DBInstance".

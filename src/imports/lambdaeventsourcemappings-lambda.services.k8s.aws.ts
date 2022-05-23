@@ -15,7 +15,7 @@ export class EventSourceMapping extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'lambda.services.k8s.aws/v1alpha1',
     kind: 'EventSourceMapping',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "EventSourceMapping".

@@ -15,7 +15,7 @@ export class SecurityGroup extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'ec2.services.k8s.aws/v1alpha1',
     kind: 'SecurityGroup',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "SecurityGroup".

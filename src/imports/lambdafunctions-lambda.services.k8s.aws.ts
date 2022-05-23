@@ -15,7 +15,7 @@ export class Function extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'lambda.services.k8s.aws/v1alpha1',
     kind: 'Function',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "Function".

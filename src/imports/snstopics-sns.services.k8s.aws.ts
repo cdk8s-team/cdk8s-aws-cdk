@@ -15,7 +15,7 @@ export class Topic extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'sns.services.k8s.aws/v1alpha1',
     kind: 'Topic',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "Topic".

@@ -15,7 +15,7 @@ export class DbSubnetGroup extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'rds.services.k8s.aws/v1alpha1',
     kind: 'DBSubnetGroup',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "DBSubnetGroup".

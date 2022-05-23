@@ -15,7 +15,7 @@ export class Resource extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'cloudcontrol.services.k8s.aws/v1alpha1',
     kind: 'Resource',
-  }
+  };
 
   /**
    * Renders a Kubernetes manifest for "Resource".

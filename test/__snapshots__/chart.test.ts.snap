@@ -115,7 +115,7 @@ Array [
       "masterUsername": "postgres",
       "storageType": "gp2",
       "vpcSecurityGroupIDs": Array [
-        "TODO",
+        "sg-06a21c2d7f87340df",
       ],
     },
   },
