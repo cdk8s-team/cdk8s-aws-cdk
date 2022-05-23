@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rds-db-instance 1`] = `
+Array [
+  Object {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": Object {
+      "name": "rdsdbinstancechart-application-c87c5287",
+    },
+    "spec": Object {
+      "minReadySeconds": 0,
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "selector": Object {
+        "matchLabels": Object {
+          "cdk8s.io/metadata.addr": "RdsDBInstanceChart-Application-c86ef48c",
+        },
+      },
+      "strategy": Object {
+        "rollingUpdate": Object {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%",
+        },
+        "type": "RollingUpdate",
+      },
+      "template": Object {
+        "metadata": Object {
+          "labels": Object {
+            "cdk8s.io/metadata.addr": "RdsDBInstanceChart-Application-c86ef48c",
+          },
+        },
+        "spec": Object {
+          "automountServiceAccountToken": true,
+          "containers": Array [
+            Object {
+              "env": Array [
+                Object {
+                  "name": "DB_ADDRESS",
+                  "valueFrom": Object {
+                    "configMapKeyRef": Object {
+                      "key": "rdsdbinstance-databaseinstance24d16791endpoint.address-c8d4b7a6",
+                      "name": "rdsdbinstan-databaseinstance24d16791configmap-c8ebba6c",
+                    },
+                  },
+                },
+                Object {
+                  "name": "DB_PORT",
+                  "valueFrom": Object {
+                    "configMapKeyRef": Object {
+                      "key": "rdsdbinstancecha-databaseinstance24d16791endpoint.port-c844db15",
+                      "name": "rdsdbinstan-databaseinstance24d16791configmap-c8ebba6c",
+                    },
+                  },
+                },
+              ],
+              "image": "application",
+              "imagePullPolicy": "Always",
+              "name": "main",
+              "ports": Array [
+                Object {
+                  "containerPort": 8080,
+                },
+              ],
+              "securityContext": Object {
+                "privileged": false,
+                "readOnlyRootFilesystem": false,
+                "runAsNonRoot": false,
+              },
+            },
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "securityContext": Object {
+            "fsGroupChangePolicy": "Always",
+            "runAsNonRoot": false,
+          },
+          "setHostnameAsFQDN": false,
+        },
+      },
+    },
+  },
+  Object {
+    "apiVersion": "rds.services.k8s.aws/v1alpha1",
+    "kind": "DBSubnetGroup",
+    "spec": Object {
+      "description": "Subnet group for DatabaseInstance database",
+      "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+      "subnetIDs": Array [
+        "subnet-065321f51cb2ac562",
+        "subnet-0d72f4230848972e9",
+      ],
+    },
+  },
+  Object {
+    "apiVersion": "v1",
+    "immutable": false,
+    "kind": "ConfigMap",
+    "metadata": Object {
+      "name": "databaseinstancesubnetgroupa4fff2a4configmap-c864c144",
+    },
+  },
+  Object {
+    "apiVersion": "rds.services.k8s.aws/v1alpha1",
+    "kind": "DBInstance",
+    "metadata": Object {
+      "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+    },
+    "spec": Object {
+      "allocatedStorage": 100,
+      "copyTagsToSnapshot": true,
+      "dbInstanceClass": "db.m5.large",
+      "dbInstanceIdentifier": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+      "dbSubnetGroupName": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+      "engine": "postgres",
+      "masterUsername": "postgres",
+      "storageType": "gp2",
+      "vpcSecurityGroupIDs": Array [
+        "TODO",
+      ],
+    },
+  },
+  Object {
+    "apiVersion": "v1",
+    "immutable": false,
+    "kind": "ConfigMap",
+    "metadata": Object {
+      "name": "rdsdbinstan-databaseinstance24d16791configmap-c8ebba6c",
+    },
+  },
+  Object {
+    "apiVersion": "services.k8s.aws/v1alpha1",
+    "kind": "FieldExport",
+    "metadata": Object {
+      "name": "rdsdbinstance-databaseinstance24d16791endpoint.address-c8d4b7a6",
+    },
+    "spec": Object {
+      "from": Object {
+        "path": "status.endpoint.address",
+        "resource": Object {
+          "group": "rds.services.k8s.aws",
+          "kind": "DBInstance",
+          "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+        },
+      },
+      "to": Object {
+        "kind": "configmap",
+        "name": "rdsdbinstan-databaseinstance24d16791configmap-c8ebba6c",
+      },
+    },
+  },
+  Object {
+    "apiVersion": "services.k8s.aws/v1alpha1",
+    "kind": "FieldExport",
+    "metadata": Object {
+      "name": "rdsdbinstancecha-databaseinstance24d16791endpoint.port-c844db15",
+    },
+    "spec": Object {
+      "from": Object {
+        "path": "status.endpoint.port",
+        "resource": Object {
+          "group": "rds.services.k8s.aws",
+          "kind": "DBInstance",
+          "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+        },
+      },
+      "to": Object {
+        "kind": "configmap",
+        "name": "rdsdbinstan-databaseinstance24d16791configmap-c8ebba6c",
+      },
+    },
+  },
+]
+`;
