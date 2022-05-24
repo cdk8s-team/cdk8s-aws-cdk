@@ -15,16 +15,16 @@ test('rds-db-instance', () => {
     constructor(scope: Construct, id: string, props: k.ChartProps = {}) {
       super(scope, id, props);
 
-      const vpc = ec2.Vpc.fromVpcAttributes(this.adapter, 'Vpc', {
+      const vpc = ec2.Vpc.fromVpcAttributes(this, 'Vpc', {
         availabilityZones: ['us-east-1b', 'us-east-1a'],
         vpcId: 'vpc-03c9c89ead26f6840',
         privateSubnetIds: ['subnet-065321f51cb2ac562', 'subnet-0d72f4230848972e9'],
         publicSubnetIds: ['subnet-0847295da218124fa', 'subnet-033821bf98e0a89bf'],
       });
 
-      const securityGroup = ec2.SecurityGroup.fromSecurityGroupId(this.adapter, 'SecurityGroup', 'sg-06a21c2d7f87340df');
+      const securityGroup = ec2.SecurityGroup.fromSecurityGroupId(this, 'SecurityGroup', 'sg-06a21c2d7f87340df');
 
-      const dbInstance = new rds.DatabaseInstance(this.adapter, 'DatabaseInstance', {
+      const dbInstance = new rds.DatabaseInstance(this, 'DatabaseInstance', {
         engine: rds.DatabaseInstanceEngine.POSTGRES,
         vpc,
         credentials: {
