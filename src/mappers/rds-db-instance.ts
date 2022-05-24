@@ -1,7 +1,10 @@
 import { aws_rds as rds } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
+import * as kplus from 'cdk8s-plus-24';
 import * as krdsdbinstances from '../imports/rdsdbinstances-rds.services.k8s.aws';
 import * as base from './base';
+
+const PASSWORD_SECRET_KEY = 'password';
 
 export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
 
@@ -27,6 +30,8 @@ export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
 
     const properties = cfnProperties as rds.CfnDBInstanceProps;
 
+    const passwordSecret = properties.masterUserPassword ? this.createPasswordSecret(properties.masterUserPassword, logicalId) : undefined;
+
     return new krdsdbinstances.DbInstance(this.chart, logicalId, {
       metadata: { name: properties.dbName },
       spec: {
@@ -38,11 +43,21 @@ export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
         dbSubnetGroupName: properties.dbSubnetGroupName,
         engine: properties.engine!,
         masterUsername: properties.masterUsername,
-        // masterUserPassword: properties.masterUserPassword,
+        masterUserPassword: passwordSecret ? {
+          key: PASSWORD_SECRET_KEY,
+          name: passwordSecret.name,
+          namespace: passwordSecret.metadata.namespace,
+        } : undefined,
         storageType: properties.storageType,
         vpcSecurityGroupIDs: properties.vpcSecurityGroups,
         dbInstanceIdentifier: properties.dbInstanceIdentifier!,
       },
     });
+  }
+
+  private createPasswordSecret(password: string, logicalId: string): kplus.Secret {
+    const secret = new kplus.Secret(this.chart, `${logicalId}Secret`);
+    secret.addStringData(PASSWORD_SECRET_KEY, password);
+    return secret;
   }
 }

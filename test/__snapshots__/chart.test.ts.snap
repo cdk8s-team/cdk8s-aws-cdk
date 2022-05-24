@@ -103,6 +103,17 @@ Array [
     },
   },
   Object {
+    "apiVersion": "v1",
+    "immutable": false,
+    "kind": "Secret",
+    "metadata": Object {
+      "name": "rdsdbinstancec-databaseinstance24d16791secret-c815fde5",
+    },
+    "stringData": Object {
+      "password": "password",
+    },
+  },
+  Object {
     "apiVersion": "rds.services.k8s.aws/v1alpha1",
     "kind": "DBInstance",
     "metadata": Object {
@@ -115,6 +126,10 @@ Array [
       "dbName": "rdsdbinstancechart-databaseinstance24d16791-c8700e61",
       "dbSubnetGroupName": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
       "engine": "postgres",
+      "masterUserPassword": Object {
+        "key": "password",
+        "name": "rdsdbinstancec-databaseinstance24d16791secret-c815fde5",
+      },
       "masterUsername": "postgres",
       "storageType": "gp2",
       "vpcSecurityGroupIDs": Array [
