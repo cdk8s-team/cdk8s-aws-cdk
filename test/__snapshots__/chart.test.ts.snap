@@ -82,6 +82,9 @@ Array [
   Object {
     "apiVersion": "rds.services.k8s.aws/v1alpha1",
     "kind": "DBSubnetGroup",
+    "metadata": Object {
+      "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+    },
     "spec": Object {
       "description": "Subnet group for DatabaseInstance database",
       "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
@@ -102,6 +105,9 @@ Array [
   Object {
     "apiVersion": "rds.services.k8s.aws/v1alpha1",
     "kind": "DBInstance",
+    "metadata": Object {
+      "name": "rdsdbinstancechart-databaseinstance24d16791-c8700e61",
+    },
     "spec": Object {
       "allocatedStorage": 100,
       "copyTagsToSnapshot": true,

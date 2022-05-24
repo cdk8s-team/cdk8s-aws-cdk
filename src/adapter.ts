@@ -60,6 +60,7 @@ export class AwsCdkAdapater extends aws.Stack {
       // for each resource we patch its name if needed
       if (!cfnProperties[mapper.nameMapping.cfnProperty]) {
         resource.addJsonPatch(k.JsonPatch.add(mapper.nameMapping.specPath, resource.name));
+        resource.addJsonPatch(k.JsonPatch.add('/metadata', { name: resource.name }));
       }
 
       // for each resource we create a config map that will hold its field exports.
