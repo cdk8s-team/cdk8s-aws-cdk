@@ -53,7 +53,7 @@ export class AwsCdkAdapater extends aws.Stack {
       }
 
       const cfnTemplateResources = Object.values((cfnResource._toCloudFormation() as any).Resources) as any[];
-      const cfnProperties = this.resolveRef(this.resolve(cfnTemplateResources[0].value.Properties.value), mapper);
+      const cfnProperties = this.resolveIntrinsics(logicalId, this.resolve(cfnTemplateResources[0].value.Properties.value), mapper);
 
       const resource = mapper.map(logicalId, cfnProperties);
 
@@ -176,24 +176,38 @@ export class AwsCdkAdapater extends aws.Stack {
     }
   }
 
-  private resolveRef(properties: any, mapper: mappers.CloudFormationResourceMapper) {
+  private resolveIntrinsics(logicalId: string, properties: any, mapper: mappers.CloudFormationResourceMapper) {
 
-    const resolved = JSON.stringify(properties, (_, value) => {
+    const resolved = JSON.stringify(properties, (key, value) => {
 
       if (typeof(value) !== 'object') {
         // not an attribute
         return value;
       }
 
-      const attribute = Object.keys(value)[0];
-      const refLogicalId = Object.values(value)[0];
-
-      if (attribute !== 'Ref') {
-        // not sure what to do here...skip in the meantime.
+      if (Object.keys(value).length !== 1) {
+        // definitely not an intrinsic, which takes the form '{ key: value }'
         return value;
       }
 
-      // find the resource the attribute references.
+      const attribute = Object.keys(value)[0];
+      const refLogicalId = Object.values(value)[0];
+
+      if (attribute.startsWith('Fn::')) {
+        // ACK doesn't have support for Fn:: intrinsics at the moment.
+        // actually -- thats not entirely true, some resources do have a way to pass
+        // values by referencing other resources. For example, you can pass a `vpcRef`
+        // to a security group, instead of the actual vpc id. but I have yet to list those out,
+        // and understand how they work.
+        throw new Error(`Unable to resolve intrinsic function '${JSON.stringify(value)}' in property '${key}' of resource '${logicalId}'`);
+      }
+
+      if (attribute !== 'Ref') {
+        // probably just a complext value, move on...
+        return value;
+      }
+
+      // we can resolve 'Ref' because we know all resource names at synth time.
       const reference = this.chart.node.findChild(refLogicalId as string);
       switch (mapper.refMapping) {
         case mappers.CloudFormationMapperRefMapping.NAME:

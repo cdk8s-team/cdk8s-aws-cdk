@@ -51,6 +51,7 @@ export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
         storageType: properties.storageType,
         vpcSecurityGroupIDs: properties.vpcSecurityGroups,
         dbInstanceIdentifier: properties.dbInstanceIdentifier!,
+        characterSetName: properties.characterSetName,
       },
     });
   }
