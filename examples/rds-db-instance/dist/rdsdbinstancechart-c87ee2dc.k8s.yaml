@@ -1,0 +1,128 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rdsdbinstancechart-workload-deployment-c81c5d16
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 1
+  selector:
+    matchLabels:
+      cdk8s.io/metadata.addr: RdsDBInstanceChart-Workload-Deployment-c8ff178a
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        cdk8s.io/metadata.addr: RdsDBInstanceChart-Workload-Deployment-c8ff178a
+    spec:
+      automountServiceAccountToken: true
+      containers:
+        - env:
+            - name: DB_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  key: rds-postgresqldatabaseinstanceecd6de4bendpoint.address-c89f4ab4
+                  name: r-postgresqldatabaseinstanceecd6de4bconfigmap-c8a37142
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: rdsdbi-postgresqldatabaseinstanceecd6de4bendpoint.port-c844d051
+                  name: r-postgresqldatabaseinstanceecd6de4bconfigmap-c8a37142
+          image: image
+          imagePullPolicy: Always
+          name: main
+          ports:
+            - containerPort: 8080
+          securityContext:
+            privileged: false
+            readOnlyRootFilesystem: false
+            runAsNonRoot: false
+      dnsPolicy: ClusterFirst
+      securityContext:
+        fsGroupChangePolicy: Always
+        runAsNonRoot: false
+      setHostnameAsFQDN: false
+---
+apiVersion: rds.services.k8s.aws/v1alpha1
+kind: DBSubnetGroup
+metadata:
+  name: rdsdbins-postgresqldatabaseinstancesubnetgroup3673dbae-c8efd037
+spec:
+  description: Subnet group for DatabaseInstance database
+  name: rdsdbins-postgresqldatabaseinstancesubnetgroup3673dbae-c8efd037
+  subnetIDs:
+    - subnet-065321f51cb2ac562
+    - subnet-0d72f4230848972e9
+---
+apiVersion: v1
+kind: ConfigMap
+immutable: false
+metadata:
+  name: postgresqldatabaseinstancesubnetgroup3673dbae-c808d477
+---
+apiVersion: v1
+kind: Secret
+immutable: false
+metadata:
+  name: rdsd-postgresqldatabaseinstanceecd6de4bsecret-c88ca733
+stringData:
+  password: password
+---
+apiVersion: rds.services.k8s.aws/v1alpha1
+kind: DBInstance
+metadata:
+  name: rdsdbinstancechart-postgresqldatabaseinstanceecd6de4b-c8fb0ab6
+spec:
+  allocatedStorage: 100
+  copyTagsToSnapshot: true
+  dbInstanceClass: db.m5.large
+  dbName: rdsdbinstancechart-postgresqldatabaseinstanceecd6de4b-c8fb0ab6
+  dbSubnetGroupName: rdsdbins-postgresqldatabaseinstancesubnetgroup3673dbae-c8efd037
+  engine: postgres
+  masterUserPassword:
+    key: password
+    name: rdsd-postgresqldatabaseinstanceecd6de4bsecret-c88ca733
+  masterUsername: postgres
+  storageType: gp2
+  vpcSecurityGroupIDs:
+    - sg-06a21c2d7f87340df
+---
+apiVersion: v1
+kind: ConfigMap
+immutable: false
+metadata:
+  name: r-postgresqldatabaseinstanceecd6de4bconfigmap-c8a37142
+---
+apiVersion: services.k8s.aws/v1alpha1
+kind: FieldExport
+metadata:
+  name: rds-postgresqldatabaseinstanceecd6de4bendpoint.address-c89f4ab4
+spec:
+  from:
+    path: status.endpoint.address
+    resource:
+      group: rds.services.k8s.aws
+      kind: DBInstance
+      name: rdsdbinstancechart-postgresqldatabaseinstanceecd6de4b-c8fb0ab6
+  to:
+    kind: configmap
+    name: r-postgresqldatabaseinstanceecd6de4bconfigmap-c8a37142
+---
+apiVersion: services.k8s.aws/v1alpha1
+kind: FieldExport
+metadata:
+  name: rdsdbi-postgresqldatabaseinstanceecd6de4bendpoint.port-c844d051
+spec:
+  from:
+    path: status.endpoint.port
+    resource:
+      group: rds.services.k8s.aws
+      kind: DBInstance
+      name: rdsdbinstancechart-postgresqldatabaseinstanceecd6de4b-c8fb0ab6
+  to:
+    kind: configmap
+    name: r-postgresqldatabaseinstanceecd6de4bconfigmap-c8a37142

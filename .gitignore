@@ -50,3 +50,5 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+/examples/rds-db-instance/cdk.out/**
+!/examples/rds-db-instance/cdk.out/*.template.json

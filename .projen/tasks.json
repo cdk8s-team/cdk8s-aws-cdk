@@ -88,6 +88,9 @@
       "steps": [
         {
           "exec": "jsii --silence-warnings=reserved-word"
+        },
+        {
+          "spawn": "synth:rds-db-instance"
         }
       ]
     },
@@ -195,6 +198,15 @@
         },
         {
           "exec": "git diff --ignore-space-at-eol --exit-code"
+        }
+      ]
+    },
+    "synth:rds-db-instance": {
+      "name": "synth:rds-db-instance",
+      "steps": [
+        {
+          "exec": "ts-node --project ../../tsconfig.dev.json main.ts",
+          "cwd": "examples/rds-db-instance"
         }
       ]
     },
