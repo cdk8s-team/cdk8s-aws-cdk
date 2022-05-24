@@ -19,36 +19,23 @@ export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
   ];
 
   public readonly nameMapping: base.CloudFormationMapperNameMapping = {
-    cfnProperty: 'dbInstanceIdentifier',
-    specPath: '/spec/dbInstanceIdentifier',
+    cfnProperty: 'dbName',
+    specPath: '/spec/dbName',
   };
 
   public map(logicalId: string, cfnProperties: any): k.ApiObject {
 
     const properties = cfnProperties as rds.CfnDBInstanceProps;
 
-    const cfnDdbSubnetGroupName = properties.dbSubnetGroupName;
-
-    let dbSubnetGroupName = undefined;
-
-    if (typeof(cfnDdbSubnetGroupName) === 'object') {
-      const key = Object.keys(cfnDdbSubnetGroupName)[0];
-      const value = Object.values(cfnDdbSubnetGroupName)[0];
-      if (key === 'Ref') { // TODO add condition here that this ref acutally repsents the name
-        const reference = this.chart.node.findChild(value as string);
-        dbSubnetGroupName = k.ApiObject.of(reference).name;
-      }
-    } else {
-      dbSubnetGroupName = cfnDdbSubnetGroupName;
-    }
-
     return new krdsdbinstances.DbInstance(this.chart, logicalId, {
-      metadata: { name: dbSubnetGroupName },
+      metadata: { name: properties.dbName },
       spec: {
+        dbName: properties.dbName,
+        dbClusterIdentifier: properties.dbInstanceIdentifier,
         dbInstanceClass: properties.dbInstanceClass,
         allocatedStorage: properties.allocatedStorage ? parseInt(properties.allocatedStorage) : undefined,
         copyTagsToSnapshot: properties.copyTagsToSnapshot as boolean,
-        dbSubnetGroupName: dbSubnetGroupName,
+        dbSubnetGroupName: properties.dbSubnetGroupName,
         engine: properties.engine!,
         masterUsername: properties.masterUsername,
         // masterUserPassword: properties.masterUserPassword,

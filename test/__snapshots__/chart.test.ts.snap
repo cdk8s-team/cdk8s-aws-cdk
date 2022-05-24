@@ -102,14 +102,11 @@ Array [
   Object {
     "apiVersion": "rds.services.k8s.aws/v1alpha1",
     "kind": "DBInstance",
-    "metadata": Object {
-      "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
-    },
     "spec": Object {
       "allocatedStorage": 100,
       "copyTagsToSnapshot": true,
       "dbInstanceClass": "db.m5.large",
-      "dbInstanceIdentifier": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+      "dbName": "rdsdbinstancechart-databaseinstance24d16791-c8700e61",
       "dbSubnetGroupName": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
       "engine": "postgres",
       "masterUsername": "postgres",
@@ -139,7 +136,7 @@ Array [
         "resource": Object {
           "group": "rds.services.k8s.aws",
           "kind": "DBInstance",
-          "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+          "name": "rdsdbinstancechart-databaseinstance24d16791-c8700e61",
         },
       },
       "to": Object {
@@ -160,7 +157,7 @@ Array [
         "resource": Object {
           "group": "rds.services.k8s.aws",
           "kind": "DBInstance",
-          "name": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
+          "name": "rdsdbinstancechart-databaseinstance24d16791-c8700e61",
         },
       },
       "to": Object {
