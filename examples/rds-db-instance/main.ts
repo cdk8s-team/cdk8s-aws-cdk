@@ -76,7 +76,16 @@ export class RdsDBInstanceStack extends aws.Stack {
   constructor(scope: Construct, id: string, props: aws.StackProps = {}) {
     super(scope, id, props);
 
-    new PostgreSQL(this, 'PostgreSQL');
+    const postgres = new PostgreSQL(this, 'PostgreSQL');
+
+    new aws.CfnOutput(this, 'PostgreSQLAddress', {
+      value: postgres.address,
+    });
+
+    new aws.CfnOutput(this, 'PostgreSQLPort', {
+      value: postgres.port,
+    });
+
   }
 
 }

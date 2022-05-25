@@ -31,6 +31,24 @@
    "DeletionPolicy": "Snapshot"
   }
  },
+ "Outputs": {
+  "PostgreSQLAddress": {
+   "Value": {
+    "Fn::GetAtt": [
+     "PostgreSQLDatabaseInstanceECD6DE4B",
+     "Endpoint.Address"
+    ]
+   }
+  },
+  "PostgreSQLPort": {
+   "Value": {
+    "Fn::GetAtt": [
+     "PostgreSQLDatabaseInstanceECD6DE4B",
+     "Endpoint.Port"
+    ]
+   }
+  }
+ },
  "Parameters": {
   "BootstrapVersion": {
    "Type": "AWS::SSM::Parameter::Value<String>",
