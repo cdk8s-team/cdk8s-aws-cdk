@@ -41,21 +41,16 @@ export class PostgreSQL extends Construct {
   }
 }
 
-export interface WorkloadProps {
-
-  readonly postgres: PostgreSQL;
-}
-
 export class Workload extends Construct {
 
-  constructor(scope: Construct, id: string, props: WorkloadProps) {
+  public readonly container: kplus.Container;
+
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     const deployment = new kplus.Deployment(this, 'Deployment');
 
-    const container = deployment.addContainer({ image: 'image', port: 8080 });
-    container.env.addVariable('DB_ADDRESS', kplus.EnvValue.fromValue(props.postgres.address));
-    container.env.addVariable('DB_PORT', kplus.EnvValue.fromValue(props.postgres.port));
+    this.container = deployment.addContainer({ image: 'image', port: 8080 });
 
   }
 }
@@ -67,7 +62,11 @@ export class RdsDBInstanceChart extends Chart {
 
     const postgres = new PostgreSQL(this, 'PostgreSQL');
 
-    new Workload(this, 'Workload', { postgres });
+    const workload = new Workload(this, 'Workload');
+
+    workload.container.env.addVariable('DB_ADDRESS', kplus.EnvValue.fromValue(postgres.address));
+    workload.container.env.addVariable('DB_PORT', kplus.EnvValue.fromValue(postgres.port));
+
   }
 
 }
