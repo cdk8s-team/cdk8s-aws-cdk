@@ -17,14 +17,14 @@ depending on which resources you want to provision.
 Install the adapter and the AWS CDK in your cdk8s project.
 
 ```console
-npm install @cdk8s/aws-cdk aws-cdk-lib
+npm install cdk8s-aws-cdk aws-cdk-lib
 ```
 
 The adapter provides a special `Chart`, that allows defining AWS CDK resources. You must extend this chart,
 in place of the normal `cdk8s.Chart` object.
 
 ```ts
-import * as awscdkadapter from '@cdk8s/aws-cdk'
+import * as awscdkadapter from 'cdk8s-aws-cdk'
 import * as k from 'cdk8s';
 import * as kplus from 'cdk8s-plus-24';
 import { aws_s3 as s3 } from 'aws-cdk-lib';
@@ -128,7 +128,7 @@ can register customer mappers:
 First you implement a custom mapper:
 
 ```ts
-import * as awscdkadapter from '@cdk8s/aws-cdk'
+import * as awscdkadapter from 'cdk8s-aws-cdk'
 
 export class KmsKeyMapper extends awscdkadapter.CloudFormationResourceMapper {
 
@@ -145,7 +145,7 @@ export class KmsKeyMapper extends awscdkadapter.CloudFormationResourceMapper {
 Then you register it:
 
 ```ts
-import * as awscdkadapter from '@cdk8s/aws-cdk'
+import * as awscdkadapter from 'cdk8s-aws-cdk'
 import * as k from 'cdk8s';
 import { aws_kms as kms } from 'aws-cdk-lib';
 

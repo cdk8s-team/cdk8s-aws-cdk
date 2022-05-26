@@ -1,6 +1,6 @@
 const { cdk } = require('projen');
 const project = new cdk.JsiiProject({
-  name: '@cdk8s/aws-cdk',
+  name: 'cdk8s-aws-cdk',
   author: 'Amazon Web Services',
   authorAddress: 'https://aws.amazon.com',
   defaultReleaseBranch: 'main',

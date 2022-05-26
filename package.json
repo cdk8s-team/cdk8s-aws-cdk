@@ -1,5 +1,5 @@
 {
-  "name": "@cdk8s/aws-cdk",
+  "name": "cdk8s-aws-cdk",
   "repository": {
     "type": "git",
     "url": "git@github.com:cdk8s-team/cdk8s-aws-cdk.git"
