@@ -39,7 +39,7 @@ Array [
                   "name": "DB_ADDRESS",
                   "valueFrom": Object {
                     "configMapKeyRef": Object {
-                      "key": "rdsdbinstance-databaseinstance24d16791endpoint.address-c8d4b7a6",
+                      "key": "default.rdsdbinstance-databaseinstance24d16791endpoint.address-c8d4b7a6",
                       "name": "rdsdbinstan-databaseinstance24d16791configmap-c8ebba6c",
                     },
                   },
@@ -48,7 +48,7 @@ Array [
                   "name": "DB_PORT",
                   "valueFrom": Object {
                     "configMapKeyRef": Object {
-                      "key": "rdsdbinstancecha-databaseinstance24d16791endpoint.port-c844db15",
+                      "key": "default.rdsdbinstancecha-databaseinstance24d16791endpoint.port-c844db15",
                       "name": "rdsdbinstan-databaseinstance24d16791configmap-c8ebba6c",
                     },
                   },
@@ -123,7 +123,7 @@ Array [
       "allocatedStorage": 100,
       "copyTagsToSnapshot": true,
       "dbInstanceClass": "db.m5.large",
-      "dbName": "rdsdbinstancechart-databaseinstance24d16791-c8700e61",
+      "dbInstanceIdentifier": "rdsdbinstancechart-databaseinstance24d16791-c8700e61",
       "dbSubnetGroupName": "rdsdbinstancechart-databaseinstancesubnetgroupa4fff2a4-c86e7648",
       "engine": "postgres",
       "masterUserPassword": Object {
@@ -153,7 +153,7 @@ Array [
     },
     "spec": Object {
       "from": Object {
-        "path": "status.endpoint.address",
+        "path": ".status.endpoint.address",
         "resource": Object {
           "group": "rds.services.k8s.aws",
           "kind": "DBInstance",
@@ -174,7 +174,7 @@ Array [
     },
     "spec": Object {
       "from": Object {
-        "path": "status.endpoint.port",
+        "path": ".status.endpoint.port",
         "resource": Object {
           "group": "rds.services.k8s.aws",
           "kind": "DBInstance",

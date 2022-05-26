@@ -6,7 +6,7 @@ import * as aws from 'aws-cdk-lib';
 import * as k from 'cdk8s';
 import * as kplus from 'cdk8s-plus-24';
 import { Construct } from 'constructs';
-import { Chart } from '../../src';
+import * as awscdkadapter from '../../src';
 
 /**
  * Creates a PostgreSQL backed RDS DB instance.
@@ -89,7 +89,7 @@ export class Workload extends Construct {
 /**
  * Combines the database and workload into a single application.
  */
-export class RdsDBInstanceChart extends Chart {
+export class RdsDBInstanceChart extends awscdkadapter.Chart {
 
   constructor(scope: Construct, id: string, props: k.ChartProps = {}) {
     super(scope, id, props);
