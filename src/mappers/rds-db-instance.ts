@@ -22,8 +22,8 @@ export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
   ];
 
   public readonly nameMapping: base.CloudFormationMapperNameMapping = {
-    cfnProperty: 'dbName',
-    specPath: '/spec/dbName',
+    cfnProperty: 'dbClusterIdentifier',
+    specPath: '/spec/dbInstanceIdentifier',
   };
 
   public map(logicalId: string, cfnProperties: any): k.ApiObject {
@@ -49,6 +49,7 @@ export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
           namespace: passwordSecret.metadata.namespace,
         } : undefined,
         storageType: properties.storageType,
+        dbSecurityGroups: properties.dbSecurityGroups,
         vpcSecurityGroupIDs: properties.vpcSecurityGroups,
         dbInstanceIdentifier: properties.dbInstanceIdentifier!,
         characterSetName: properties.characterSetName,

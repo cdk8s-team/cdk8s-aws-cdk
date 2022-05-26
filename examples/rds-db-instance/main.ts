@@ -23,7 +23,7 @@ export class PostgreSQL extends Construct {
       publicSubnetIds: ['subnet-0847295da218124fa', 'subnet-033821bf98e0a89bf'],
     });
 
-    const securityGroup = ec2.SecurityGroup.fromSecurityGroupId(this, 'SecurityGroup', 'sg-06a21c2d7f87340df');
+    const securityGroup = ec2.SecurityGroup.fromSecurityGroupId(this, 'SecurityGroup', 'sg-022f93d53709f83b2');
 
     const dbInstance = new rds.DatabaseInstance(this, 'DatabaseInstance', {
       engine: rds.DatabaseInstanceEngine.POSTGRES,
@@ -41,17 +41,33 @@ export class PostgreSQL extends Construct {
   }
 }
 
+export interface WorkloadProps {
+
+  readonly dbAddress: string;
+
+  readonly dbPort: string;
+
+}
+
 export class Workload extends Construct {
+
+  private static readonly DB_ADDRESS_ENV = 'DB_ADDRESS';
+  private static readonly DB_PORT_ENV = 'DB_PORT';
 
   public readonly container: kplus.Container;
 
-  constructor(scope: Construct, id: string) {
+  constructor(scope: Construct, id: string, props: WorkloadProps) {
     super(scope, id);
 
     const deployment = new kplus.Deployment(this, 'Deployment');
 
-    this.container = deployment.addContainer({ image: 'image', port: 8080 });
+    this.container = deployment.addContainer({
+      image: 'public.ecr.aws/amazonlinux/amazonlinux:2022',
+      command: ['/bin/bash', '-c', `while true; do echo ADDRESS=\${${Workload.DB_ADDRESS_ENV}}; echo PORT=\${${Workload.DB_PORT_ENV}}; echo "Sleeping..."; echo $(date); sleep 2; done`],
+    });
 
+    this.container.env.addVariable(Workload.DB_ADDRESS_ENV, kplus.EnvValue.fromValue(props.dbAddress));
+    this.container.env.addVariable(Workload.DB_PORT_ENV, kplus.EnvValue.fromValue(props.dbPort));
   }
 }
 
@@ -62,10 +78,10 @@ export class RdsDBInstanceChart extends Chart {
 
     const postgres = new PostgreSQL(this, 'PostgreSQL');
 
-    const workload = new Workload(this, 'Workload');
-
-    workload.container.env.addVariable('DB_ADDRESS', kplus.EnvValue.fromValue(postgres.address));
-    workload.container.env.addVariable('DB_PORT', kplus.EnvValue.fromValue(postgres.port));
+    new Workload(this, 'Workload', {
+      dbAddress: postgres.address,
+      dbPort: postgres.port,
+    });
 
   }
 

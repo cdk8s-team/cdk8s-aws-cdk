@@ -24,7 +24,7 @@
     "MasterUserPassword": "password",
     "StorageType": "gp2",
     "VPCSecurityGroups": [
-     "sg-06a21c2d7f87340df"
+     "sg-022f93d53709f83b2"
     ]
    },
    "UpdateReplacePolicy": "Snapshot",

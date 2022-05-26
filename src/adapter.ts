@@ -161,13 +161,14 @@ export class AwsCdkAdapater extends aws.Stack {
         }
 
         const fieldExportSpec: kfieldexports.FieldExportSpec = fieldExport.toJson().spec;
+        const namespace = fieldExport.metadata.namespace ?? 'default';
 
         resource.addJsonPatch(k.JsonPatch.remove(`${path}/${i}/env/${j}`));
         resource.addJsonPatch(k.JsonPatch.add(`${path}/${i}/env/${j}`, {
           name: envVar.name,
           valueFrom: {
             configMapKeyRef: {
-              key: fieldExport.name,
+              key: `${namespace}.${fieldExport.name}`,
               name: fieldExportSpec.to.name,
             },
           },
@@ -234,7 +235,7 @@ export class AwsCdkAdapater extends aws.Stack {
   }
 
   private fieldExportPath(field: string) {
-    return `status.${field}`;
+    return `.status.${field}`;
   }
 
 }
