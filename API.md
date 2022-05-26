@@ -2,39 +2,39 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### AwsCdkAdapater <a name="AwsCdkAdapater" id="@cdk8s/aws-cdk.AwsCdkAdapater"></a>
+### AwsCdkAdapater <a name="AwsCdkAdapater" id="cdk8s-aws-cdk.AwsCdkAdapater"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.AwsCdkAdapater.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.AwsCdkAdapater.Initializer"></a>
 
 ```typescript
-import { AwsCdkAdapater } from '@cdk8s/aws-cdk'
+import { AwsCdkAdapater } from 'cdk8s-aws-cdk'
 
 new AwsCdkAdapater(scope: Construct, id: string, props: AwsCdkAdapterProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.Initializer.parameter.props">props</a></code> | <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps">AwsCdkAdapterProps</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.Initializer.parameter.props">props</a></code> | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps">AwsCdkAdapterProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdk8s/aws-cdk.AwsCdkAdapater.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-aws-cdk.AwsCdkAdapater.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdk8s/aws-cdk.AwsCdkAdapater.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-aws-cdk.AwsCdkAdapater.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="@cdk8s/aws-cdk.AwsCdkAdapater.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="cdk8s-aws-cdk.AwsCdkAdapater.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps">AwsCdkAdapterProps</a>
+- *Type:* <a href="#cdk8s-aws-cdk.AwsCdkAdapterProps">AwsCdkAdapterProps</a>
 
 ---
 
@@ -42,25 +42,25 @@ new AwsCdkAdapater(scope: Construct, id: string, props: AwsCdkAdapterProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.addDependency">addDependency</a></code> | Add a dependency between this stack and another stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.addTransform">addTransform</a></code> | Add a Transform to this stack. A Transform is a macro that AWS CloudFormation uses to process your template. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.exportValue">exportValue</a></code> | Create a CloudFormation Export for a value. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.formatArn">formatArn</a></code> | Creates an ARN from components. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.getLogicalId">getLogicalId</a></code> | Allocates a stack-unique CloudFormation-compatible logical identity for a specific resource. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.regionalFact">regionalFact</a></code> | Look up a fact value for the given fact for the region of this stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.renameLogicalId">renameLogicalId</a></code> | Rename a generated logical identities. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.reportMissingContextKey">reportMissingContextKey</a></code> | Indicate that a context key was expected. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.resolve">resolve</a></code> | Resolve a tokenized value in the context of the current stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.splitArn">splitArn</a></code> | Splits the provided ARN into its components. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.toJsonString">toJsonString</a></code> | Convert an object, potentially containing tokens, to a JSON string. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.registerMapper">registerMapper</a></code> | Register a mapper that can transform a specific CloudFormation resource type. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.transformAttributes">transformAttributes</a></code> | Transform CloudFormation attributes into ACK field exports. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.transformResources">transformResources</a></code> | Transform CloudFormation resources to ACK resources. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addDependency">addDependency</a></code> | Add a dependency between this stack and another stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addTransform">addTransform</a></code> | Add a Transform to this stack. A Transform is a macro that AWS CloudFormation uses to process your template. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.exportValue">exportValue</a></code> | Create a CloudFormation Export for a value. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.formatArn">formatArn</a></code> | Creates an ARN from components. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.getLogicalId">getLogicalId</a></code> | Allocates a stack-unique CloudFormation-compatible logical identity for a specific resource. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.regionalFact">regionalFact</a></code> | Look up a fact value for the given fact for the region of this stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.renameLogicalId">renameLogicalId</a></code> | Rename a generated logical identities. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.reportMissingContextKey">reportMissingContextKey</a></code> | Indicate that a context key was expected. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.resolve">resolve</a></code> | Resolve a tokenized value in the context of the current stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.splitArn">splitArn</a></code> | Splits the provided ARN into its components. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.toJsonString">toJsonString</a></code> | Convert an object, potentially containing tokens, to a JSON string. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.registerMapper">registerMapper</a></code> | Register a mapper that can transform a specific CloudFormation resource type. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.transformAttributes">transformAttributes</a></code> | Transform CloudFormation attributes into ACK field exports. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.transformResources">transformResources</a></code> | Transform CloudFormation resources to ACK resources. |
 
 ---
 
-##### `toString` <a name="toString" id="@cdk8s/aws-cdk.AwsCdkAdapater.toString"></a>
+##### `toString` <a name="toString" id="cdk8s-aws-cdk.AwsCdkAdapater.toString"></a>
 
 ```typescript
 public toString(): string
@@ -68,7 +68,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addDependency` <a name="addDependency" id="@cdk8s/aws-cdk.AwsCdkAdapater.addDependency"></a>
+##### `addDependency` <a name="addDependency" id="cdk8s-aws-cdk.AwsCdkAdapater.addDependency"></a>
 
 ```typescript
 public addDependency(target: Stack, reason?: string): void
@@ -79,19 +79,19 @@ Add a dependency between this stack and another stack.
 This can be used to define dependencies between any two stacks within an
 app, and also supports nested stacks.
 
-###### `target`<sup>Required</sup> <a name="target" id="@cdk8s/aws-cdk.AwsCdkAdapater.addDependency.parameter.target"></a>
+###### `target`<sup>Required</sup> <a name="target" id="cdk8s-aws-cdk.AwsCdkAdapater.addDependency.parameter.target"></a>
 
 - *Type:* aws-cdk-lib.Stack
 
 ---
 
-###### `reason`<sup>Optional</sup> <a name="reason" id="@cdk8s/aws-cdk.AwsCdkAdapater.addDependency.parameter.reason"></a>
+###### `reason`<sup>Optional</sup> <a name="reason" id="cdk8s-aws-cdk.AwsCdkAdapater.addDependency.parameter.reason"></a>
 
 - *Type:* string
 
 ---
 
-##### `addTransform` <a name="addTransform" id="@cdk8s/aws-cdk.AwsCdkAdapater.addTransform"></a>
+##### `addTransform` <a name="addTransform" id="cdk8s-aws-cdk.AwsCdkAdapater.addTransform"></a>
 
 ```typescript
 public addTransform(transform: string): void
@@ -112,7 +112,7 @@ stack.addTransform('AWS::Serverless-2016-10-31')
 ```
 
 
-###### `transform`<sup>Required</sup> <a name="transform" id="@cdk8s/aws-cdk.AwsCdkAdapater.addTransform.parameter.transform"></a>
+###### `transform`<sup>Required</sup> <a name="transform" id="cdk8s-aws-cdk.AwsCdkAdapater.addTransform.parameter.transform"></a>
 
 - *Type:* string
 
@@ -120,7 +120,7 @@ The transform to add.
 
 ---
 
-##### `exportValue` <a name="exportValue" id="@cdk8s/aws-cdk.AwsCdkAdapater.exportValue"></a>
+##### `exportValue` <a name="exportValue" id="cdk8s-aws-cdk.AwsCdkAdapater.exportValue"></a>
 
 ```typescript
 public exportValue(exportedValue: any, options?: ExportValueOptions): string
@@ -171,19 +171,19 @@ Instead, the process takes two deployments:
 - Don't forget to remove the `exportValue()` call as well.
 - Deploy again (this time only the `producerStack` will be changed -- the bucket will be deleted).
 
-###### `exportedValue`<sup>Required</sup> <a name="exportedValue" id="@cdk8s/aws-cdk.AwsCdkAdapater.exportValue.parameter.exportedValue"></a>
+###### `exportedValue`<sup>Required</sup> <a name="exportedValue" id="cdk8s-aws-cdk.AwsCdkAdapater.exportValue.parameter.exportedValue"></a>
 
 - *Type:* any
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="@cdk8s/aws-cdk.AwsCdkAdapater.exportValue.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="cdk8s-aws-cdk.AwsCdkAdapater.exportValue.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.ExportValueOptions
 
 ---
 
-##### `formatArn` <a name="formatArn" id="@cdk8s/aws-cdk.AwsCdkAdapater.formatArn"></a>
+##### `formatArn` <a name="formatArn" id="cdk8s-aws-cdk.AwsCdkAdapater.formatArn"></a>
 
 ```typescript
 public formatArn(components: ArnComponents): string
@@ -205,13 +205,13 @@ The required ARN pieces that are omitted will be taken from the stack that
 the 'scope' is attached to. If all ARN pieces are supplied, the supplied scope
 can be 'undefined'.
 
-###### `components`<sup>Required</sup> <a name="components" id="@cdk8s/aws-cdk.AwsCdkAdapater.formatArn.parameter.components"></a>
+###### `components`<sup>Required</sup> <a name="components" id="cdk8s-aws-cdk.AwsCdkAdapater.formatArn.parameter.components"></a>
 
 - *Type:* aws-cdk-lib.ArnComponents
 
 ---
 
-##### `getLogicalId` <a name="getLogicalId" id="@cdk8s/aws-cdk.AwsCdkAdapater.getLogicalId"></a>
+##### `getLogicalId` <a name="getLogicalId" id="cdk8s-aws-cdk.AwsCdkAdapater.getLogicalId"></a>
 
 ```typescript
 public getLogicalId(element: CfnElement): string
@@ -227,7 +227,7 @@ This method uses the protected method `allocateLogicalId` to render the
 logical ID for an element. To modify the naming scheme, extend the `Stack`
 class and override this method.
 
-###### `element`<sup>Required</sup> <a name="element" id="@cdk8s/aws-cdk.AwsCdkAdapater.getLogicalId.parameter.element"></a>
+###### `element`<sup>Required</sup> <a name="element" id="cdk8s-aws-cdk.AwsCdkAdapater.getLogicalId.parameter.element"></a>
 
 - *Type:* aws-cdk-lib.CfnElement
 
@@ -235,7 +235,7 @@ The CloudFormation element for which a logical identity is needed.
 
 ---
 
-##### `regionalFact` <a name="regionalFact" id="@cdk8s/aws-cdk.AwsCdkAdapater.regionalFact"></a>
+##### `regionalFact` <a name="regionalFact" id="cdk8s-aws-cdk.AwsCdkAdapater.regionalFact"></a>
 
 ```typescript
 public regionalFact(factName: string, defaultValue?: string): string
@@ -259,19 +259,19 @@ not have to worry about regional facts.
 If `defaultValue` is not given, it is an error if the fact is unknown for
 the given region.
 
-###### `factName`<sup>Required</sup> <a name="factName" id="@cdk8s/aws-cdk.AwsCdkAdapater.regionalFact.parameter.factName"></a>
+###### `factName`<sup>Required</sup> <a name="factName" id="cdk8s-aws-cdk.AwsCdkAdapater.regionalFact.parameter.factName"></a>
 
 - *Type:* string
 
 ---
 
-###### `defaultValue`<sup>Optional</sup> <a name="defaultValue" id="@cdk8s/aws-cdk.AwsCdkAdapater.regionalFact.parameter.defaultValue"></a>
+###### `defaultValue`<sup>Optional</sup> <a name="defaultValue" id="cdk8s-aws-cdk.AwsCdkAdapater.regionalFact.parameter.defaultValue"></a>
 
 - *Type:* string
 
 ---
 
-##### `renameLogicalId` <a name="renameLogicalId" id="@cdk8s/aws-cdk.AwsCdkAdapater.renameLogicalId"></a>
+##### `renameLogicalId` <a name="renameLogicalId" id="cdk8s-aws-cdk.AwsCdkAdapater.renameLogicalId"></a>
 
 ```typescript
 public renameLogicalId(oldId: string, newId: string): void
@@ -282,19 +282,19 @@ Rename a generated logical identities.
 To modify the naming scheme strategy, extend the `Stack` class and
 override the `allocateLogicalId` method.
 
-###### `oldId`<sup>Required</sup> <a name="oldId" id="@cdk8s/aws-cdk.AwsCdkAdapater.renameLogicalId.parameter.oldId"></a>
+###### `oldId`<sup>Required</sup> <a name="oldId" id="cdk8s-aws-cdk.AwsCdkAdapater.renameLogicalId.parameter.oldId"></a>
 
 - *Type:* string
 
 ---
 
-###### `newId`<sup>Required</sup> <a name="newId" id="@cdk8s/aws-cdk.AwsCdkAdapater.renameLogicalId.parameter.newId"></a>
+###### `newId`<sup>Required</sup> <a name="newId" id="cdk8s-aws-cdk.AwsCdkAdapater.renameLogicalId.parameter.newId"></a>
 
 - *Type:* string
 
 ---
 
-##### `reportMissingContextKey` <a name="reportMissingContextKey" id="@cdk8s/aws-cdk.AwsCdkAdapater.reportMissingContextKey"></a>
+##### `reportMissingContextKey` <a name="reportMissingContextKey" id="cdk8s-aws-cdk.AwsCdkAdapater.reportMissingContextKey"></a>
 
 ```typescript
 public reportMissingContextKey(report: MissingContext): void
@@ -305,7 +305,7 @@ Indicate that a context key was expected.
 Contains instructions which will be emitted into the cloud assembly on how
 the key should be supplied.
 
-###### `report`<sup>Required</sup> <a name="report" id="@cdk8s/aws-cdk.AwsCdkAdapater.reportMissingContextKey.parameter.report"></a>
+###### `report`<sup>Required</sup> <a name="report" id="cdk8s-aws-cdk.AwsCdkAdapater.reportMissingContextKey.parameter.report"></a>
 
 - *Type:* aws-cdk-lib.cloud_assembly_schema.MissingContext
 
@@ -313,7 +313,7 @@ The set of parameters needed to obtain the context.
 
 ---
 
-##### `resolve` <a name="resolve" id="@cdk8s/aws-cdk.AwsCdkAdapater.resolve"></a>
+##### `resolve` <a name="resolve" id="cdk8s-aws-cdk.AwsCdkAdapater.resolve"></a>
 
 ```typescript
 public resolve(obj: any): any
@@ -321,13 +321,13 @@ public resolve(obj: any): any
 
 Resolve a tokenized value in the context of the current stack.
 
-###### `obj`<sup>Required</sup> <a name="obj" id="@cdk8s/aws-cdk.AwsCdkAdapater.resolve.parameter.obj"></a>
+###### `obj`<sup>Required</sup> <a name="obj" id="cdk8s-aws-cdk.AwsCdkAdapater.resolve.parameter.obj"></a>
 
 - *Type:* any
 
 ---
 
-##### `splitArn` <a name="splitArn" id="@cdk8s/aws-cdk.AwsCdkAdapater.splitArn"></a>
+##### `splitArn` <a name="splitArn" id="cdk8s-aws-cdk.AwsCdkAdapater.splitArn"></a>
 
 ```typescript
 public splitArn(arn: string, arnFormat: ArnFormat): ArnComponents
@@ -340,7 +340,7 @@ and a Token representing a dynamic CloudFormation expression
 (in which case the returned components will also be dynamic CloudFormation expressions,
 encoded as Tokens).
 
-###### `arn`<sup>Required</sup> <a name="arn" id="@cdk8s/aws-cdk.AwsCdkAdapater.splitArn.parameter.arn"></a>
+###### `arn`<sup>Required</sup> <a name="arn" id="cdk8s-aws-cdk.AwsCdkAdapater.splitArn.parameter.arn"></a>
 
 - *Type:* string
 
@@ -348,7 +348,7 @@ the ARN to split into its components.
 
 ---
 
-###### `arnFormat`<sup>Required</sup> <a name="arnFormat" id="@cdk8s/aws-cdk.AwsCdkAdapater.splitArn.parameter.arnFormat"></a>
+###### `arnFormat`<sup>Required</sup> <a name="arnFormat" id="cdk8s-aws-cdk.AwsCdkAdapater.splitArn.parameter.arnFormat"></a>
 
 - *Type:* aws-cdk-lib.ArnFormat
 
@@ -356,7 +356,7 @@ the expected format of 'arn' - depends on what format the service 'arn' represen
 
 ---
 
-##### `toJsonString` <a name="toJsonString" id="@cdk8s/aws-cdk.AwsCdkAdapater.toJsonString"></a>
+##### `toJsonString` <a name="toJsonString" id="cdk8s-aws-cdk.AwsCdkAdapater.toJsonString"></a>
 
 ```typescript
 public toJsonString(obj: any, space?: number): string
@@ -364,19 +364,19 @@ public toJsonString(obj: any, space?: number): string
 
 Convert an object, potentially containing tokens, to a JSON string.
 
-###### `obj`<sup>Required</sup> <a name="obj" id="@cdk8s/aws-cdk.AwsCdkAdapater.toJsonString.parameter.obj"></a>
+###### `obj`<sup>Required</sup> <a name="obj" id="cdk8s-aws-cdk.AwsCdkAdapater.toJsonString.parameter.obj"></a>
 
 - *Type:* any
 
 ---
 
-###### `space`<sup>Optional</sup> <a name="space" id="@cdk8s/aws-cdk.AwsCdkAdapater.toJsonString.parameter.space"></a>
+###### `space`<sup>Optional</sup> <a name="space" id="cdk8s-aws-cdk.AwsCdkAdapater.toJsonString.parameter.space"></a>
 
 - *Type:* number
 
 ---
 
-##### `registerMapper` <a name="registerMapper" id="@cdk8s/aws-cdk.AwsCdkAdapater.registerMapper"></a>
+##### `registerMapper` <a name="registerMapper" id="cdk8s-aws-cdk.AwsCdkAdapater.registerMapper"></a>
 
 ```typescript
 public registerMapper(mapper: CloudFormationResourceMapper): void
@@ -384,13 +384,13 @@ public registerMapper(mapper: CloudFormationResourceMapper): void
 
 Register a mapper that can transform a specific CloudFormation resource type.
 
-###### `mapper`<sup>Required</sup> <a name="mapper" id="@cdk8s/aws-cdk.AwsCdkAdapater.registerMapper.parameter.mapper"></a>
+###### `mapper`<sup>Required</sup> <a name="mapper" id="cdk8s-aws-cdk.AwsCdkAdapater.registerMapper.parameter.mapper"></a>
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationResourceMapper">CloudFormationResourceMapper</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationResourceMapper">CloudFormationResourceMapper</a>
 
 ---
 
-##### `transformAttributes` <a name="transformAttributes" id="@cdk8s/aws-cdk.AwsCdkAdapater.transformAttributes"></a>
+##### `transformAttributes` <a name="transformAttributes" id="cdk8s-aws-cdk.AwsCdkAdapater.transformAttributes"></a>
 
 ```typescript
 public transformAttributes(apiObjects: ApiObject[]): void
@@ -404,13 +404,13 @@ as only they allow referencing fields from config maps, which the field exports 
 If an ApiObject contains a CloudFormation attribute in any other definition, it will remain
 as is, it will remain in-place.
 
-###### `apiObjects`<sup>Required</sup> <a name="apiObjects" id="@cdk8s/aws-cdk.AwsCdkAdapater.transformAttributes.parameter.apiObjects"></a>
+###### `apiObjects`<sup>Required</sup> <a name="apiObjects" id="cdk8s-aws-cdk.AwsCdkAdapater.transformAttributes.parameter.apiObjects"></a>
 
 - *Type:* cdk8s.ApiObject[]
 
 ---
 
-##### `transformResources` <a name="transformResources" id="@cdk8s/aws-cdk.AwsCdkAdapater.transformResources"></a>
+##### `transformResources` <a name="transformResources" id="cdk8s-aws-cdk.AwsCdkAdapater.transformResources"></a>
 
 ```typescript
 public transformResources(cfnResources: CfnResource[]): void
@@ -418,7 +418,7 @@ public transformResources(cfnResources: CfnResource[]): void
 
 Transform CloudFormation resources to ACK resources.
 
-###### `cfnResources`<sup>Required</sup> <a name="cfnResources" id="@cdk8s/aws-cdk.AwsCdkAdapater.transformResources.parameter.cfnResources"></a>
+###### `cfnResources`<sup>Required</sup> <a name="cfnResources" id="cdk8s-aws-cdk.AwsCdkAdapater.transformResources.parameter.cfnResources"></a>
 
 - *Type:* aws-cdk-lib.CfnResource[]
 
@@ -428,16 +428,16 @@ Transform CloudFormation resources to ACK resources.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.isStack">isStack</a></code> | Return whether the given object is a Stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.of">of</a></code> | Looks up the first stack scope in which `construct` is defined. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.isStack">isStack</a></code> | Return whether the given object is a Stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.of">of</a></code> | Looks up the first stack scope in which `construct` is defined. |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="@cdk8s/aws-cdk.AwsCdkAdapater.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="cdk8s-aws-cdk.AwsCdkAdapater.isConstruct"></a>
 
 ```typescript
-import { AwsCdkAdapater } from '@cdk8s/aws-cdk'
+import { AwsCdkAdapater } from 'cdk8s-aws-cdk'
 
 AwsCdkAdapater.isConstruct(x: any)
 ```
@@ -458,7 +458,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdk8s/aws-cdk.AwsCdkAdapater.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="cdk8s-aws-cdk.AwsCdkAdapater.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -466,10 +466,10 @@ Any object.
 
 ---
 
-##### `isStack` <a name="isStack" id="@cdk8s/aws-cdk.AwsCdkAdapater.isStack"></a>
+##### `isStack` <a name="isStack" id="cdk8s-aws-cdk.AwsCdkAdapater.isStack"></a>
 
 ```typescript
-import { AwsCdkAdapater } from '@cdk8s/aws-cdk'
+import { AwsCdkAdapater } from 'cdk8s-aws-cdk'
 
 AwsCdkAdapater.isStack(x: any)
 ```
@@ -478,16 +478,16 @@ Return whether the given object is a Stack.
 
 We do attribute detection since we can't reliably use 'instanceof'.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdk8s/aws-cdk.AwsCdkAdapater.isStack.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="cdk8s-aws-cdk.AwsCdkAdapater.isStack.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `of` <a name="of" id="@cdk8s/aws-cdk.AwsCdkAdapater.of"></a>
+##### `of` <a name="of" id="cdk8s-aws-cdk.AwsCdkAdapater.of"></a>
 
 ```typescript
-import { AwsCdkAdapater } from '@cdk8s/aws-cdk'
+import { AwsCdkAdapater } from 'cdk8s-aws-cdk'
 
 AwsCdkAdapater.of(construct: IConstruct)
 ```
@@ -496,7 +496,7 @@ Looks up the first stack scope in which `construct` is defined.
 
 Fails if there is no stack up the tree.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="@cdk8s/aws-cdk.AwsCdkAdapater.of.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="cdk8s-aws-cdk.AwsCdkAdapater.of.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
@@ -508,31 +508,31 @@ The construct to start the search from.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.account">account</a></code> | <code>string</code> | The AWS account into which this stack will be deployed. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.artifactId">artifactId</a></code> | <code>string</code> | The ID of the cloud assembly artifact for this stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.availabilityZones">availabilityZones</a></code> | <code>string[]</code> | Returns the list of AZs that are available in the AWS environment (account/region) associated with this stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.bundlingRequired">bundlingRequired</a></code> | <code>boolean</code> | Indicates whether the stack requires bundling or not. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.dependencies">dependencies</a></code> | <code>aws-cdk-lib.Stack[]</code> | Return the stacks this stack depends on. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.environment">environment</a></code> | <code>string</code> | The environment coordinates in which this stack is deployed. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.nested">nested</a></code> | <code>boolean</code> | Indicates if this is a nested stack, in which case `parentStack` will include a reference to it's parent. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.notificationArns">notificationArns</a></code> | <code>string[]</code> | Returns the list of notification Amazon Resource Names (ARNs) for the current stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.partition">partition</a></code> | <code>string</code> | The partition in which this stack is defined. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.region">region</a></code> | <code>string</code> | The AWS region into which this stack will be deployed (e.g. `us-west-2`). |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.stackId">stackId</a></code> | <code>string</code> | The ID of the stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.stackName">stackName</a></code> | <code>string</code> | The concrete CloudFormation physical stack name. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.synthesizer">synthesizer</a></code> | <code>aws-cdk-lib.IStackSynthesizer</code> | Synthesis method for this stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.tags">tags</a></code> | <code>aws-cdk-lib.TagManager</code> | Tags to be applied to the stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.templateFile">templateFile</a></code> | <code>string</code> | The name of the CloudFormation template file emitted to the output directory during synthesis. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.templateOptions">templateOptions</a></code> | <code>aws-cdk-lib.ITemplateOptions</code> | Options for CloudFormation template (like version, transform, description). |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.urlSuffix">urlSuffix</a></code> | <code>string</code> | The Amazon domain suffix for the region in which this stack is defined. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.nestedStackParent">nestedStackParent</a></code> | <code>aws-cdk-lib.Stack</code> | If this is a nested stack, returns it's parent stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.nestedStackResource">nestedStackResource</a></code> | <code>aws-cdk-lib.CfnResource</code> | If this is a nested stack, this represents its `AWS::CloudFormation::Stack` resource. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapater.property.terminationProtection">terminationProtection</a></code> | <code>boolean</code> | Whether termination protection is enabled for this stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.account">account</a></code> | <code>string</code> | The AWS account into which this stack will be deployed. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.artifactId">artifactId</a></code> | <code>string</code> | The ID of the cloud assembly artifact for this stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.availabilityZones">availabilityZones</a></code> | <code>string[]</code> | Returns the list of AZs that are available in the AWS environment (account/region) associated with this stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.bundlingRequired">bundlingRequired</a></code> | <code>boolean</code> | Indicates whether the stack requires bundling or not. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.dependencies">dependencies</a></code> | <code>aws-cdk-lib.Stack[]</code> | Return the stacks this stack depends on. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.environment">environment</a></code> | <code>string</code> | The environment coordinates in which this stack is deployed. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.nested">nested</a></code> | <code>boolean</code> | Indicates if this is a nested stack, in which case `parentStack` will include a reference to it's parent. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.notificationArns">notificationArns</a></code> | <code>string[]</code> | Returns the list of notification Amazon Resource Names (ARNs) for the current stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.partition">partition</a></code> | <code>string</code> | The partition in which this stack is defined. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.region">region</a></code> | <code>string</code> | The AWS region into which this stack will be deployed (e.g. `us-west-2`). |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.stackId">stackId</a></code> | <code>string</code> | The ID of the stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.stackName">stackName</a></code> | <code>string</code> | The concrete CloudFormation physical stack name. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.synthesizer">synthesizer</a></code> | <code>aws-cdk-lib.IStackSynthesizer</code> | Synthesis method for this stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.tags">tags</a></code> | <code>aws-cdk-lib.TagManager</code> | Tags to be applied to the stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.templateFile">templateFile</a></code> | <code>string</code> | The name of the CloudFormation template file emitted to the output directory during synthesis. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.templateOptions">templateOptions</a></code> | <code>aws-cdk-lib.ITemplateOptions</code> | Options for CloudFormation template (like version, transform, description). |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.urlSuffix">urlSuffix</a></code> | <code>string</code> | The Amazon domain suffix for the region in which this stack is defined. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.nestedStackParent">nestedStackParent</a></code> | <code>aws-cdk-lib.Stack</code> | If this is a nested stack, returns it's parent stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.nestedStackResource">nestedStackResource</a></code> | <code>aws-cdk-lib.CfnResource</code> | If this is a nested stack, this represents its `AWS::CloudFormation::Stack` resource. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.property.terminationProtection">terminationProtection</a></code> | <code>boolean</code> | Whether termination protection is enabled for this stack. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="cdk8s-aws-cdk.AwsCdkAdapater.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -544,7 +544,7 @@ The tree node.
 
 ---
 
-##### `account`<sup>Required</sup> <a name="account" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.account"></a>
+##### `account`<sup>Required</sup> <a name="account" id="cdk8s-aws-cdk.AwsCdkAdapater.property.account"></a>
 
 ```typescript
 public readonly account: string;
@@ -573,7 +573,7 @@ implement some other region-agnostic behavior.
 
 ---
 
-##### `artifactId`<sup>Required</sup> <a name="artifactId" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.artifactId"></a>
+##### `artifactId`<sup>Required</sup> <a name="artifactId" id="cdk8s-aws-cdk.AwsCdkAdapater.property.artifactId"></a>
 
 ```typescript
 public readonly artifactId: string;
@@ -585,7 +585,7 @@ The ID of the cloud assembly artifact for this stack.
 
 ---
 
-##### `availabilityZones`<sup>Required</sup> <a name="availabilityZones" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.availabilityZones"></a>
+##### `availabilityZones`<sup>Required</sup> <a name="availabilityZones" id="cdk8s-aws-cdk.AwsCdkAdapater.property.availabilityZones"></a>
 
 ```typescript
 public readonly availabilityZones: string[];
@@ -608,7 +608,7 @@ To specify a different strategy for selecting availability zones override this m
 
 ---
 
-##### `bundlingRequired`<sup>Required</sup> <a name="bundlingRequired" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.bundlingRequired"></a>
+##### `bundlingRequired`<sup>Required</sup> <a name="bundlingRequired" id="cdk8s-aws-cdk.AwsCdkAdapater.property.bundlingRequired"></a>
 
 ```typescript
 public readonly bundlingRequired: boolean;
@@ -620,7 +620,7 @@ Indicates whether the stack requires bundling or not.
 
 ---
 
-##### `dependencies`<sup>Required</sup> <a name="dependencies" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.dependencies"></a>
+##### `dependencies`<sup>Required</sup> <a name="dependencies" id="cdk8s-aws-cdk.AwsCdkAdapater.property.dependencies"></a>
 
 ```typescript
 public readonly dependencies: Stack[];
@@ -632,7 +632,7 @@ Return the stacks this stack depends on.
 
 ---
 
-##### `environment`<sup>Required</sup> <a name="environment" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.environment"></a>
+##### `environment`<sup>Required</sup> <a name="environment" id="cdk8s-aws-cdk.AwsCdkAdapater.property.environment"></a>
 
 ```typescript
 public readonly environment: string;
@@ -656,7 +656,7 @@ region/account-agnostic.
 
 ---
 
-##### `nested`<sup>Required</sup> <a name="nested" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.nested"></a>
+##### `nested`<sup>Required</sup> <a name="nested" id="cdk8s-aws-cdk.AwsCdkAdapater.property.nested"></a>
 
 ```typescript
 public readonly nested: boolean;
@@ -668,7 +668,7 @@ Indicates if this is a nested stack, in which case `parentStack` will include a 
 
 ---
 
-##### `notificationArns`<sup>Required</sup> <a name="notificationArns" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.notificationArns"></a>
+##### `notificationArns`<sup>Required</sup> <a name="notificationArns" id="cdk8s-aws-cdk.AwsCdkAdapater.property.notificationArns"></a>
 
 ```typescript
 public readonly notificationArns: string[];
@@ -680,7 +680,7 @@ Returns the list of notification Amazon Resource Names (ARNs) for the current st
 
 ---
 
-##### `partition`<sup>Required</sup> <a name="partition" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.partition"></a>
+##### `partition`<sup>Required</sup> <a name="partition" id="cdk8s-aws-cdk.AwsCdkAdapater.property.partition"></a>
 
 ```typescript
 public readonly partition: string;
@@ -692,7 +692,7 @@ The partition in which this stack is defined.
 
 ---
 
-##### `region`<sup>Required</sup> <a name="region" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.region"></a>
+##### `region`<sup>Required</sup> <a name="region" id="cdk8s-aws-cdk.AwsCdkAdapater.property.region"></a>
 
 ```typescript
 public readonly region: string;
@@ -721,7 +721,7 @@ implement some other region-agnostic behavior.
 
 ---
 
-##### `stackId`<sup>Required</sup> <a name="stackId" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.stackId"></a>
+##### `stackId`<sup>Required</sup> <a name="stackId" id="cdk8s-aws-cdk.AwsCdkAdapater.property.stackId"></a>
 
 ```typescript
 public readonly stackId: string;
@@ -741,7 +741,7 @@ The ID of the stack.
 ```
 
 
-##### `stackName`<sup>Required</sup> <a name="stackName" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.stackName"></a>
+##### `stackName`<sup>Required</sup> <a name="stackName" id="cdk8s-aws-cdk.AwsCdkAdapater.property.stackName"></a>
 
 ```typescript
 public readonly stackName: string;
@@ -762,7 +762,7 @@ you can use `Aws.stackName` directly.
 
 ---
 
-##### `synthesizer`<sup>Required</sup> <a name="synthesizer" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.synthesizer"></a>
+##### `synthesizer`<sup>Required</sup> <a name="synthesizer" id="cdk8s-aws-cdk.AwsCdkAdapater.property.synthesizer"></a>
 
 ```typescript
 public readonly synthesizer: IStackSynthesizer;
@@ -774,7 +774,7 @@ Synthesis method for this stack.
 
 ---
 
-##### `tags`<sup>Required</sup> <a name="tags" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.tags"></a>
+##### `tags`<sup>Required</sup> <a name="tags" id="cdk8s-aws-cdk.AwsCdkAdapater.property.tags"></a>
 
 ```typescript
 public readonly tags: TagManager;
@@ -786,7 +786,7 @@ Tags to be applied to the stack.
 
 ---
 
-##### `templateFile`<sup>Required</sup> <a name="templateFile" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.templateFile"></a>
+##### `templateFile`<sup>Required</sup> <a name="templateFile" id="cdk8s-aws-cdk.AwsCdkAdapater.property.templateFile"></a>
 
 ```typescript
 public readonly templateFile: string;
@@ -800,7 +800,7 @@ Example value: `MyStack.template.json`
 
 ---
 
-##### `templateOptions`<sup>Required</sup> <a name="templateOptions" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.templateOptions"></a>
+##### `templateOptions`<sup>Required</sup> <a name="templateOptions" id="cdk8s-aws-cdk.AwsCdkAdapater.property.templateOptions"></a>
 
 ```typescript
 public readonly templateOptions: ITemplateOptions;
@@ -812,7 +812,7 @@ Options for CloudFormation template (like version, transform, description).
 
 ---
 
-##### `urlSuffix`<sup>Required</sup> <a name="urlSuffix" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.urlSuffix"></a>
+##### `urlSuffix`<sup>Required</sup> <a name="urlSuffix" id="cdk8s-aws-cdk.AwsCdkAdapater.property.urlSuffix"></a>
 
 ```typescript
 public readonly urlSuffix: string;
@@ -824,7 +824,7 @@ The Amazon domain suffix for the region in which this stack is defined.
 
 ---
 
-##### `nestedStackParent`<sup>Optional</sup> <a name="nestedStackParent" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.nestedStackParent"></a>
+##### `nestedStackParent`<sup>Optional</sup> <a name="nestedStackParent" id="cdk8s-aws-cdk.AwsCdkAdapater.property.nestedStackParent"></a>
 
 ```typescript
 public readonly nestedStackParent: Stack;
@@ -836,7 +836,7 @@ If this is a nested stack, returns it's parent stack.
 
 ---
 
-##### `nestedStackResource`<sup>Optional</sup> <a name="nestedStackResource" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.nestedStackResource"></a>
+##### `nestedStackResource`<sup>Optional</sup> <a name="nestedStackResource" id="cdk8s-aws-cdk.AwsCdkAdapater.property.nestedStackResource"></a>
 
 ```typescript
 public readonly nestedStackResource: CfnResource;
@@ -850,7 +850,7 @@ If this is a nested stack, this represents its `AWS::CloudFormation::Stack` reso
 
 ---
 
-##### `terminationProtection`<sup>Optional</sup> <a name="terminationProtection" id="@cdk8s/aws-cdk.AwsCdkAdapater.property.terminationProtection"></a>
+##### `terminationProtection`<sup>Optional</sup> <a name="terminationProtection" id="cdk8s-aws-cdk.AwsCdkAdapater.property.terminationProtection"></a>
 
 ```typescript
 public readonly terminationProtection: boolean;
@@ -863,37 +863,37 @@ Whether termination protection is enabled for this stack.
 ---
 
 
-### Chart <a name="Chart" id="@cdk8s/aws-cdk.Chart"></a>
+### Chart <a name="Chart" id="cdk8s-aws-cdk.Chart"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.Chart.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.Chart.Initializer"></a>
 
 ```typescript
-import { Chart } from '@cdk8s/aws-cdk'
+import { Chart } from 'cdk8s-aws-cdk'
 
 new Chart(scope: Construct, id: string, props?: ChartProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.Chart.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.Chart.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.Chart.Initializer.parameter.props">props</a></code> | <code>cdk8s.ChartProps</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Chart.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Chart.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Chart.Initializer.parameter.props">props</a></code> | <code>cdk8s.ChartProps</code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdk8s/aws-cdk.Chart.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk8s-aws-cdk.Chart.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="@cdk8s/aws-cdk.Chart.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="cdk8s-aws-cdk.Chart.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Optional</sup> <a name="props" id="@cdk8s/aws-cdk.Chart.Initializer.parameter.props"></a>
+##### `props`<sup>Optional</sup> <a name="props" id="cdk8s-aws-cdk.Chart.Initializer.parameter.props"></a>
 
 - *Type:* cdk8s.ChartProps
 
@@ -903,14 +903,14 @@ new Chart(scope: Construct, id: string, props?: ChartProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.Chart.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdk8s/aws-cdk.Chart.addDependency">addDependency</a></code> | Create a dependency between this Chart and other constructs. |
-| <code><a href="#@cdk8s/aws-cdk.Chart.generateObjectName">generateObjectName</a></code> | Generates a app-unique name for an object given it's construct node path. |
-| <code><a href="#@cdk8s/aws-cdk.Chart.toJson">toJson</a></code> | Renders this chart to a set of Kubernetes JSON resources. |
+| <code><a href="#cdk8s-aws-cdk.Chart.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdk8s-aws-cdk.Chart.addDependency">addDependency</a></code> | Create a dependency between this Chart and other constructs. |
+| <code><a href="#cdk8s-aws-cdk.Chart.generateObjectName">generateObjectName</a></code> | Generates a app-unique name for an object given it's construct node path. |
+| <code><a href="#cdk8s-aws-cdk.Chart.toJson">toJson</a></code> | Renders this chart to a set of Kubernetes JSON resources. |
 
 ---
 
-##### `toString` <a name="toString" id="@cdk8s/aws-cdk.Chart.toString"></a>
+##### `toString` <a name="toString" id="cdk8s-aws-cdk.Chart.toString"></a>
 
 ```typescript
 public toString(): string
@@ -918,7 +918,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addDependency` <a name="addDependency" id="@cdk8s/aws-cdk.Chart.addDependency"></a>
+##### `addDependency` <a name="addDependency" id="cdk8s-aws-cdk.Chart.addDependency"></a>
 
 ```typescript
 public addDependency(dependencies: IConstruct): void
@@ -928,7 +928,7 @@ Create a dependency between this Chart and other constructs.
 
 These can be other ApiObjects, Charts, or custom.
 
-###### `dependencies`<sup>Required</sup> <a name="dependencies" id="@cdk8s/aws-cdk.Chart.addDependency.parameter.dependencies"></a>
+###### `dependencies`<sup>Required</sup> <a name="dependencies" id="cdk8s-aws-cdk.Chart.addDependency.parameter.dependencies"></a>
 
 - *Type:* constructs.IConstruct
 
@@ -936,7 +936,7 @@ the dependencies to add.
 
 ---
 
-##### `generateObjectName` <a name="generateObjectName" id="@cdk8s/aws-cdk.Chart.generateObjectName"></a>
+##### `generateObjectName` <a name="generateObjectName" id="cdk8s-aws-cdk.Chart.generateObjectName"></a>
 
 ```typescript
 public generateObjectName(apiObject: ApiObject): string
@@ -959,7 +959,7 @@ since it’s the common denominator for all kubernetes resources
 You can override this method if you wish to customize object names at the
 chart level.
 
-###### `apiObject`<sup>Required</sup> <a name="apiObject" id="@cdk8s/aws-cdk.Chart.generateObjectName.parameter.apiObject"></a>
+###### `apiObject`<sup>Required</sup> <a name="apiObject" id="cdk8s-aws-cdk.Chart.generateObjectName.parameter.apiObject"></a>
 
 - *Type:* cdk8s.ApiObject
 
@@ -967,7 +967,7 @@ The API object to generate a name for.
 
 ---
 
-##### `toJson` <a name="toJson" id="@cdk8s/aws-cdk.Chart.toJson"></a>
+##### `toJson` <a name="toJson" id="cdk8s-aws-cdk.Chart.toJson"></a>
 
 ```typescript
 public toJson(): any[]
@@ -979,16 +979,16 @@ Renders this chart to a set of Kubernetes JSON resources.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.Chart.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdk8s/aws-cdk.Chart.isChart">isChart</a></code> | Return whether the given object is a Chart. |
-| <code><a href="#@cdk8s/aws-cdk.Chart.of">of</a></code> | Finds the chart in which a node is defined. |
+| <code><a href="#cdk8s-aws-cdk.Chart.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdk8s-aws-cdk.Chart.isChart">isChart</a></code> | Return whether the given object is a Chart. |
+| <code><a href="#cdk8s-aws-cdk.Chart.of">of</a></code> | Finds the chart in which a node is defined. |
 
 ---
 
-##### `isConstruct` <a name="isConstruct" id="@cdk8s/aws-cdk.Chart.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="cdk8s-aws-cdk.Chart.isConstruct"></a>
 
 ```typescript
-import { Chart } from '@cdk8s/aws-cdk'
+import { Chart } from 'cdk8s-aws-cdk'
 
 Chart.isConstruct(x: any)
 ```
@@ -1009,7 +1009,7 @@ library can be accidentally installed, and `instanceof` will behave
 unpredictably. It is safest to avoid using `instanceof`, and using
 this type-testing method instead.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdk8s/aws-cdk.Chart.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="cdk8s-aws-cdk.Chart.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -1017,10 +1017,10 @@ Any object.
 
 ---
 
-##### `isChart` <a name="isChart" id="@cdk8s/aws-cdk.Chart.isChart"></a>
+##### `isChart` <a name="isChart" id="cdk8s-aws-cdk.Chart.isChart"></a>
 
 ```typescript
-import { Chart } from '@cdk8s/aws-cdk'
+import { Chart } from 'cdk8s-aws-cdk'
 
 Chart.isChart(x: any)
 ```
@@ -1029,23 +1029,23 @@ Return whether the given object is a Chart.
 
 We do attribute detection since we can't reliably use 'instanceof'.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdk8s/aws-cdk.Chart.isChart.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="cdk8s-aws-cdk.Chart.isChart.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `of` <a name="of" id="@cdk8s/aws-cdk.Chart.of"></a>
+##### `of` <a name="of" id="cdk8s-aws-cdk.Chart.of"></a>
 
 ```typescript
-import { Chart } from '@cdk8s/aws-cdk'
+import { Chart } from 'cdk8s-aws-cdk'
 
 Chart.of(c: IConstruct)
 ```
 
 Finds the chart in which a node is defined.
 
-###### `c`<sup>Required</sup> <a name="c" id="@cdk8s/aws-cdk.Chart.of.parameter.c"></a>
+###### `c`<sup>Required</sup> <a name="c" id="cdk8s-aws-cdk.Chart.of.parameter.c"></a>
 
 - *Type:* constructs.IConstruct
 
@@ -1057,13 +1057,13 @@ a construct node.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.Chart.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdk8s/aws-cdk.Chart.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | Labels applied to all resources in this chart. |
-| <code><a href="#@cdk8s/aws-cdk.Chart.property.namespace">namespace</a></code> | <code>string</code> | The default namespace for all objects in this chart. |
+| <code><a href="#cdk8s-aws-cdk.Chart.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdk8s-aws-cdk.Chart.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | Labels applied to all resources in this chart. |
+| <code><a href="#cdk8s-aws-cdk.Chart.property.namespace">namespace</a></code> | <code>string</code> | The default namespace for all objects in this chart. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@cdk8s/aws-cdk.Chart.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="cdk8s-aws-cdk.Chart.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -1075,7 +1075,7 @@ The tree node.
 
 ---
 
-##### `labels`<sup>Required</sup> <a name="labels" id="@cdk8s/aws-cdk.Chart.property.labels"></a>
+##### `labels`<sup>Required</sup> <a name="labels" id="cdk8s-aws-cdk.Chart.property.labels"></a>
 
 ```typescript
 public readonly labels: {[ key: string ]: string};
@@ -1089,7 +1089,7 @@ This is an immutable copy.
 
 ---
 
-##### `namespace`<sup>Optional</sup> <a name="namespace" id="@cdk8s/aws-cdk.Chart.property.namespace"></a>
+##### `namespace`<sup>Optional</sup> <a name="namespace" id="cdk8s-aws-cdk.Chart.property.namespace"></a>
 
 ```typescript
 public readonly namespace: string;
@@ -1104,12 +1104,12 @@ The default namespace for all objects in this chart.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### AwsCdkAdapterProps <a name="AwsCdkAdapterProps" id="@cdk8s/aws-cdk.AwsCdkAdapterProps"></a>
+### AwsCdkAdapterProps <a name="AwsCdkAdapterProps" id="cdk8s-aws-cdk.AwsCdkAdapterProps"></a>
 
-#### Initializer <a name="Initializer" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="cdk8s-aws-cdk.AwsCdkAdapterProps.Initializer"></a>
 
 ```typescript
-import { AwsCdkAdapterProps } from '@cdk8s/aws-cdk'
+import { AwsCdkAdapterProps } from 'cdk8s-aws-cdk'
 
 const awsCdkAdapterProps: AwsCdkAdapterProps = { ... }
 ```
@@ -1118,18 +1118,18 @@ const awsCdkAdapterProps: AwsCdkAdapterProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.analyticsReporting">analyticsReporting</a></code> | <code>boolean</code> | Include runtime versioning information in this Stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.description">description</a></code> | <code>string</code> | A description of the stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.env">env</a></code> | <code>aws-cdk-lib.Environment</code> | The AWS environment (account/region) where this stack will be deployed. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.stackName">stackName</a></code> | <code>string</code> | Name to deploy the stack with. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.synthesizer">synthesizer</a></code> | <code>aws-cdk-lib.IStackSynthesizer</code> | Synthesis method to use while deploying this stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Stack tags that will be applied to all the taggable resources and the stack itself. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.terminationProtection">terminationProtection</a></code> | <code>boolean</code> | Whether to enable termination protection for this stack. |
-| <code><a href="#@cdk8s/aws-cdk.AwsCdkAdapterProps.property.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.analyticsReporting">analyticsReporting</a></code> | <code>boolean</code> | Include runtime versioning information in this Stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.description">description</a></code> | <code>string</code> | A description of the stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.env">env</a></code> | <code>aws-cdk-lib.Environment</code> | The AWS environment (account/region) where this stack will be deployed. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.stackName">stackName</a></code> | <code>string</code> | Name to deploy the stack with. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.synthesizer">synthesizer</a></code> | <code>aws-cdk-lib.IStackSynthesizer</code> | Synthesis method to use while deploying this stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Stack tags that will be applied to all the taggable resources and the stack itself. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.terminationProtection">terminationProtection</a></code> | <code>boolean</code> | Whether to enable termination protection for this stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `analyticsReporting`<sup>Optional</sup> <a name="analyticsReporting" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.analyticsReporting"></a>
+##### `analyticsReporting`<sup>Optional</sup> <a name="analyticsReporting" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.analyticsReporting"></a>
 
 ```typescript
 public readonly analyticsReporting: boolean;
@@ -1142,7 +1142,7 @@ Include runtime versioning information in this Stack.
 
 ---
 
-##### `description`<sup>Optional</sup> <a name="description" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.description"></a>
+##### `description`<sup>Optional</sup> <a name="description" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.description"></a>
 
 ```typescript
 public readonly description: string;
@@ -1155,7 +1155,7 @@ A description of the stack.
 
 ---
 
-##### `env`<sup>Optional</sup> <a name="env" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.env"></a>
+##### `env`<sup>Optional</sup> <a name="env" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.env"></a>
 
 ```typescript
 public readonly env: Environment;
@@ -1229,7 +1229,7 @@ new MyStack(app, 'Stack1');
 ```
 
 
-##### `stackName`<sup>Optional</sup> <a name="stackName" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.stackName"></a>
+##### `stackName`<sup>Optional</sup> <a name="stackName" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.stackName"></a>
 
 ```typescript
 public readonly stackName: string;
@@ -1242,7 +1242,7 @@ Name to deploy the stack with.
 
 ---
 
-##### `synthesizer`<sup>Optional</sup> <a name="synthesizer" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.synthesizer"></a>
+##### `synthesizer`<sup>Optional</sup> <a name="synthesizer" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.synthesizer"></a>
 
 ```typescript
 public readonly synthesizer: IStackSynthesizer;
@@ -1255,7 +1255,7 @@ Synthesis method to use while deploying this stack.
 
 ---
 
-##### `tags`<sup>Optional</sup> <a name="tags" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.tags"></a>
+##### `tags`<sup>Optional</sup> <a name="tags" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.tags"></a>
 
 ```typescript
 public readonly tags: {[ key: string ]: string};
@@ -1268,7 +1268,7 @@ Stack tags that will be applied to all the taggable resources and the stack itse
 
 ---
 
-##### `terminationProtection`<sup>Optional</sup> <a name="terminationProtection" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.terminationProtection"></a>
+##### `terminationProtection`<sup>Optional</sup> <a name="terminationProtection" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.terminationProtection"></a>
 
 ```typescript
 public readonly terminationProtection: boolean;
@@ -1281,7 +1281,7 @@ Whether to enable termination protection for this stack.
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.AwsCdkAdapterProps.property.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.chart"></a>
 
 ```typescript
 public readonly chart: Chart;
@@ -1291,12 +1291,12 @@ public readonly chart: Chart;
 
 ---
 
-### CloudFormationMapperExportMapping <a name="CloudFormationMapperExportMapping" id="@cdk8s/aws-cdk.CloudFormationMapperExportMapping"></a>
+### CloudFormationMapperExportMapping <a name="CloudFormationMapperExportMapping" id="cdk8s-aws-cdk.CloudFormationMapperExportMapping"></a>
 
-#### Initializer <a name="Initializer" id="@cdk8s/aws-cdk.CloudFormationMapperExportMapping.Initializer"></a>
+#### Initializer <a name="Initializer" id="cdk8s-aws-cdk.CloudFormationMapperExportMapping.Initializer"></a>
 
 ```typescript
-import { CloudFormationMapperExportMapping } from '@cdk8s/aws-cdk'
+import { CloudFormationMapperExportMapping } from 'cdk8s-aws-cdk'
 
 const cloudFormationMapperExportMapping: CloudFormationMapperExportMapping = { ... }
 ```
@@ -1305,12 +1305,12 @@ const cloudFormationMapperExportMapping: CloudFormationMapperExportMapping = { .
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping.property.attribute">attribute</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping.property.field">field</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping.property.attribute">attribute</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping.property.field">field</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `attribute`<sup>Required</sup> <a name="attribute" id="@cdk8s/aws-cdk.CloudFormationMapperExportMapping.property.attribute"></a>
+##### `attribute`<sup>Required</sup> <a name="attribute" id="cdk8s-aws-cdk.CloudFormationMapperExportMapping.property.attribute"></a>
 
 ```typescript
 public readonly attribute: string;
@@ -1320,7 +1320,7 @@ public readonly attribute: string;
 
 ---
 
-##### `field`<sup>Required</sup> <a name="field" id="@cdk8s/aws-cdk.CloudFormationMapperExportMapping.property.field"></a>
+##### `field`<sup>Required</sup> <a name="field" id="cdk8s-aws-cdk.CloudFormationMapperExportMapping.property.field"></a>
 
 ```typescript
 public readonly field: string;
@@ -1330,12 +1330,12 @@ public readonly field: string;
 
 ---
 
-### CloudFormationMapperNameMapping <a name="CloudFormationMapperNameMapping" id="@cdk8s/aws-cdk.CloudFormationMapperNameMapping"></a>
+### CloudFormationMapperNameMapping <a name="CloudFormationMapperNameMapping" id="cdk8s-aws-cdk.CloudFormationMapperNameMapping"></a>
 
-#### Initializer <a name="Initializer" id="@cdk8s/aws-cdk.CloudFormationMapperNameMapping.Initializer"></a>
+#### Initializer <a name="Initializer" id="cdk8s-aws-cdk.CloudFormationMapperNameMapping.Initializer"></a>
 
 ```typescript
-import { CloudFormationMapperNameMapping } from '@cdk8s/aws-cdk'
+import { CloudFormationMapperNameMapping } from 'cdk8s-aws-cdk'
 
 const cloudFormationMapperNameMapping: CloudFormationMapperNameMapping = { ... }
 ```
@@ -1344,12 +1344,12 @@ const cloudFormationMapperNameMapping: CloudFormationMapperNameMapping = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping.property.cfnProperty">cfnProperty</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping.property.specPath">specPath</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping.property.cfnProperty">cfnProperty</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping.property.specPath">specPath</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `cfnProperty`<sup>Required</sup> <a name="cfnProperty" id="@cdk8s/aws-cdk.CloudFormationMapperNameMapping.property.cfnProperty"></a>
+##### `cfnProperty`<sup>Required</sup> <a name="cfnProperty" id="cdk8s-aws-cdk.CloudFormationMapperNameMapping.property.cfnProperty"></a>
 
 ```typescript
 public readonly cfnProperty: string;
@@ -1359,7 +1359,7 @@ public readonly cfnProperty: string;
 
 ---
 
-##### `specPath`<sup>Required</sup> <a name="specPath" id="@cdk8s/aws-cdk.CloudFormationMapperNameMapping.property.specPath"></a>
+##### `specPath`<sup>Required</sup> <a name="specPath" id="cdk8s-aws-cdk.CloudFormationMapperNameMapping.property.specPath"></a>
 
 ```typescript
 public readonly specPath: string;
@@ -1371,23 +1371,23 @@ public readonly specPath: string;
 
 ## Classes <a name="Classes" id="Classes"></a>
 
-### CloudFormationResourceMapper <a name="CloudFormationResourceMapper" id="@cdk8s/aws-cdk.CloudFormationResourceMapper"></a>
+### CloudFormationResourceMapper <a name="CloudFormationResourceMapper" id="cdk8s-aws-cdk.CloudFormationResourceMapper"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.CloudFormationResourceMapper.Initializer"></a>
 
 ```typescript
-import { CloudFormationResourceMapper } from '@cdk8s/aws-cdk'
+import { CloudFormationResourceMapper } from 'cdk8s-aws-cdk'
 
 new CloudFormationResourceMapper(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationResourceMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationResourceMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.CloudFormationResourceMapper.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -1397,23 +1397,23 @@ new CloudFormationResourceMapper(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationResourceMapper.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationResourceMapper.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.CloudFormationResourceMapper.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.CloudFormationResourceMapper.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.CloudFormationResourceMapper.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -1424,44 +1424,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationResourceMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationResourceMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationResourceMapper.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationResourceMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationResourceMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationResourceMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationResourceMapper.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationResourceMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.CloudFormationResourceMapper.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.CloudFormationResourceMapper.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.CloudFormationResourceMapper.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.CloudFormationResourceMapper.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.CloudFormationResourceMapper.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -1472,23 +1472,23 @@ public readonly type: string;
 ---
 
 
-### Ec2SecurityGroupMapper <a name="Ec2SecurityGroupMapper" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper"></a>
+### Ec2SecurityGroupMapper <a name="Ec2SecurityGroupMapper" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.Initializer"></a>
 
 ```typescript
-import { Ec2SecurityGroupMapper } from '@cdk8s/aws-cdk'
+import { Ec2SecurityGroupMapper } from 'cdk8s-aws-cdk'
 
 new Ec2SecurityGroupMapper(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.Ec2SecurityGroupMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Ec2SecurityGroupMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -1498,23 +1498,23 @@ new Ec2SecurityGroupMapper(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.Ec2SecurityGroupMapper.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Ec2SecurityGroupMapper.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -1525,44 +1525,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.Ec2SecurityGroupMapper.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.Ec2SecurityGroupMapper.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -1573,23 +1573,23 @@ public readonly type: string;
 ---
 
 
-### IamPolicyMapper <a name="IamPolicyMapper" id="@cdk8s/aws-cdk.IamPolicyMapper"></a>
+### IamPolicyMapper <a name="IamPolicyMapper" id="cdk8s-aws-cdk.IamPolicyMapper"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.IamPolicyMapper.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.IamPolicyMapper.Initializer"></a>
 
 ```typescript
-import { IamPolicyMapper } from '@cdk8s/aws-cdk'
+import { IamPolicyMapper } from 'cdk8s-aws-cdk'
 
 new IamPolicyMapper(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.IamPolicyMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamPolicyMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.IamPolicyMapper.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.IamPolicyMapper.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -1599,23 +1599,23 @@ new IamPolicyMapper(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.IamPolicyMapper.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamPolicyMapper.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.IamPolicyMapper.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.IamPolicyMapper.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.IamPolicyMapper.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.IamPolicyMapper.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.IamPolicyMapper.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.IamPolicyMapper.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -1626,44 +1626,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.IamPolicyMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.IamPolicyMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.IamPolicyMapper.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.IamPolicyMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamPolicyMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamPolicyMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamPolicyMapper.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamPolicyMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.IamPolicyMapper.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.IamPolicyMapper.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.IamPolicyMapper.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.IamPolicyMapper.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.IamPolicyMapper.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.IamPolicyMapper.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.IamPolicyMapper.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.IamPolicyMapper.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -1674,23 +1674,23 @@ public readonly type: string;
 ---
 
 
-### IamRoleMapper <a name="IamRoleMapper" id="@cdk8s/aws-cdk.IamRoleMapper"></a>
+### IamRoleMapper <a name="IamRoleMapper" id="cdk8s-aws-cdk.IamRoleMapper"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.IamRoleMapper.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.IamRoleMapper.Initializer"></a>
 
 ```typescript
-import { IamRoleMapper } from '@cdk8s/aws-cdk'
+import { IamRoleMapper } from 'cdk8s-aws-cdk'
 
 new IamRoleMapper(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.IamRoleMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamRoleMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.IamRoleMapper.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.IamRoleMapper.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -1700,23 +1700,23 @@ new IamRoleMapper(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.IamRoleMapper.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamRoleMapper.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.IamRoleMapper.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.IamRoleMapper.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.IamRoleMapper.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.IamRoleMapper.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.IamRoleMapper.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.IamRoleMapper.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -1727,44 +1727,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.IamRoleMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.IamRoleMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.IamRoleMapper.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.IamRoleMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamRoleMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamRoleMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamRoleMapper.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.IamRoleMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.IamRoleMapper.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.IamRoleMapper.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.IamRoleMapper.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.IamRoleMapper.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.IamRoleMapper.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.IamRoleMapper.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.IamRoleMapper.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.IamRoleMapper.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -1775,23 +1775,23 @@ public readonly type: string;
 ---
 
 
-### LambdaFunctionMapper <a name="LambdaFunctionMapper" id="@cdk8s/aws-cdk.LambdaFunctionMapper"></a>
+### LambdaFunctionMapper <a name="LambdaFunctionMapper" id="cdk8s-aws-cdk.LambdaFunctionMapper"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.LambdaFunctionMapper.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.LambdaFunctionMapper.Initializer"></a>
 
 ```typescript
-import { LambdaFunctionMapper } from '@cdk8s/aws-cdk'
+import { LambdaFunctionMapper } from 'cdk8s-aws-cdk'
 
 new LambdaFunctionMapper(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.LambdaFunctionMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.LambdaFunctionMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.LambdaFunctionMapper.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.LambdaFunctionMapper.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -1801,23 +1801,23 @@ new LambdaFunctionMapper(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.LambdaFunctionMapper.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.LambdaFunctionMapper.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.LambdaFunctionMapper.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.LambdaFunctionMapper.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.LambdaFunctionMapper.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.LambdaFunctionMapper.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.LambdaFunctionMapper.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.LambdaFunctionMapper.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -1828,44 +1828,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.LambdaFunctionMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.LambdaFunctionMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.LambdaFunctionMapper.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.LambdaFunctionMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.LambdaFunctionMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.LambdaFunctionMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.LambdaFunctionMapper.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.LambdaFunctionMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.LambdaFunctionMapper.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.LambdaFunctionMapper.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.LambdaFunctionMapper.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.LambdaFunctionMapper.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.LambdaFunctionMapper.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.LambdaFunctionMapper.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.LambdaFunctionMapper.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.LambdaFunctionMapper.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -1876,23 +1876,23 @@ public readonly type: string;
 ---
 
 
-### RdsDBInstanceMapper <a name="RdsDBInstanceMapper" id="@cdk8s/aws-cdk.RdsDBInstanceMapper"></a>
+### RdsDBInstanceMapper <a name="RdsDBInstanceMapper" id="cdk8s-aws-cdk.RdsDBInstanceMapper"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.RdsDBInstanceMapper.Initializer"></a>
 
 ```typescript
-import { RdsDBInstanceMapper } from '@cdk8s/aws-cdk'
+import { RdsDBInstanceMapper } from 'cdk8s-aws-cdk'
 
 new RdsDBInstanceMapper(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBInstanceMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBInstanceMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.RdsDBInstanceMapper.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -1902,23 +1902,23 @@ new RdsDBInstanceMapper(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBInstanceMapper.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBInstanceMapper.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.RdsDBInstanceMapper.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.RdsDBInstanceMapper.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.RdsDBInstanceMapper.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -1929,44 +1929,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBInstanceMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBInstanceMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBInstanceMapper.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBInstanceMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBInstanceMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBInstanceMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBInstanceMapper.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBInstanceMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.RdsDBInstanceMapper.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.RdsDBInstanceMapper.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.RdsDBInstanceMapper.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.RdsDBInstanceMapper.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.RdsDBInstanceMapper.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -1977,23 +1977,23 @@ public readonly type: string;
 ---
 
 
-### RdsDBSubnetGroup <a name="RdsDBSubnetGroup" id="@cdk8s/aws-cdk.RdsDBSubnetGroup"></a>
+### RdsDBSubnetGroup <a name="RdsDBSubnetGroup" id="cdk8s-aws-cdk.RdsDBSubnetGroup"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.RdsDBSubnetGroup.Initializer"></a>
 
 ```typescript
-import { RdsDBSubnetGroup } from '@cdk8s/aws-cdk'
+import { RdsDBSubnetGroup } from 'cdk8s-aws-cdk'
 
 new RdsDBSubnetGroup(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBSubnetGroup.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBSubnetGroup.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.RdsDBSubnetGroup.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -2003,23 +2003,23 @@ new RdsDBSubnetGroup(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBSubnetGroup.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBSubnetGroup.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.RdsDBSubnetGroup.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.RdsDBSubnetGroup.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.RdsDBSubnetGroup.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -2030,44 +2030,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBSubnetGroup.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBSubnetGroup.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBSubnetGroup.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.RdsDBSubnetGroup.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBSubnetGroup.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBSubnetGroup.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBSubnetGroup.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.RdsDBSubnetGroup.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.RdsDBSubnetGroup.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.RdsDBSubnetGroup.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.RdsDBSubnetGroup.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.RdsDBSubnetGroup.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.RdsDBSubnetGroup.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -2078,23 +2078,23 @@ public readonly type: string;
 ---
 
 
-### S3BucketMapper <a name="S3BucketMapper" id="@cdk8s/aws-cdk.S3BucketMapper"></a>
+### S3BucketMapper <a name="S3BucketMapper" id="cdk8s-aws-cdk.S3BucketMapper"></a>
 
-#### Initializers <a name="Initializers" id="@cdk8s/aws-cdk.S3BucketMapper.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdk8s-aws-cdk.S3BucketMapper.Initializer"></a>
 
 ```typescript
-import { S3BucketMapper } from '@cdk8s/aws-cdk'
+import { S3BucketMapper } from 'cdk8s-aws-cdk'
 
 new S3BucketMapper(chart: Chart)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.S3BucketMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.S3BucketMapper.Initializer.parameter.chart">chart</a></code> | <code>cdk8s.Chart</code> | *No description.* |
 
 ---
 
-##### `chart`<sup>Required</sup> <a name="chart" id="@cdk8s/aws-cdk.S3BucketMapper.Initializer.parameter.chart"></a>
+##### `chart`<sup>Required</sup> <a name="chart" id="cdk8s-aws-cdk.S3BucketMapper.Initializer.parameter.chart"></a>
 
 - *Type:* cdk8s.Chart
 
@@ -2104,23 +2104,23 @@ new S3BucketMapper(chart: Chart)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.S3BucketMapper.map">map</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.S3BucketMapper.map">map</a></code> | *No description.* |
 
 ---
 
-##### `map` <a name="map" id="@cdk8s/aws-cdk.S3BucketMapper.map"></a>
+##### `map` <a name="map" id="cdk8s-aws-cdk.S3BucketMapper.map"></a>
 
 ```typescript
 public map(logicalId: string, cfnProperties: any): ApiObject
 ```
 
-###### `logicalId`<sup>Required</sup> <a name="logicalId" id="@cdk8s/aws-cdk.S3BucketMapper.map.parameter.logicalId"></a>
+###### `logicalId`<sup>Required</sup> <a name="logicalId" id="cdk8s-aws-cdk.S3BucketMapper.map.parameter.logicalId"></a>
 
 - *Type:* string
 
 ---
 
-###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="@cdk8s/aws-cdk.S3BucketMapper.map.parameter.cfnProperties"></a>
+###### `cfnProperties`<sup>Required</sup> <a name="cfnProperties" id="cdk8s-aws-cdk.S3BucketMapper.map.parameter.cfnProperties"></a>
 
 - *Type:* any
 
@@ -2131,44 +2131,44 @@ public map(logicalId: string, cfnProperties: any): ApiObject
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.S3BucketMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.S3BucketMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.S3BucketMapper.property.refMapping">refMapping</a></code> | <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.S3BucketMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.S3BucketMapper.property.exportMappings">exportMappings</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]</code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.S3BucketMapper.property.nameMapping">nameMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.S3BucketMapper.property.refMapping">refMapping</a></code> | <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.S3BucketMapper.property.type">type</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="@cdk8s/aws-cdk.S3BucketMapper.property.exportMappings"></a>
+##### `exportMappings`<sup>Required</sup> <a name="exportMappings" id="cdk8s-aws-cdk.S3BucketMapper.property.exportMappings"></a>
 
 ```typescript
 public readonly exportMappings: CloudFormationMapperExportMapping[];
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperExportMapping">CloudFormationMapperExportMapping</a>[]
 
 ---
 
-##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="@cdk8s/aws-cdk.S3BucketMapper.property.nameMapping"></a>
+##### `nameMapping`<sup>Required</sup> <a name="nameMapping" id="cdk8s-aws-cdk.S3BucketMapper.property.nameMapping"></a>
 
 ```typescript
 public readonly nameMapping: CloudFormationMapperNameMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperNameMapping">CloudFormationMapperNameMapping</a>
 
 ---
 
-##### `refMapping`<sup>Required</sup> <a name="refMapping" id="@cdk8s/aws-cdk.S3BucketMapper.property.refMapping"></a>
+##### `refMapping`<sup>Required</sup> <a name="refMapping" id="cdk8s-aws-cdk.S3BucketMapper.property.refMapping"></a>
 
 ```typescript
 public readonly refMapping: CloudFormationMapperRefMapping;
 ```
 
-- *Type:* <a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
+- *Type:* <a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping">CloudFormationMapperRefMapping</a>
 
 ---
 
-##### `type`<sup>Required</sup> <a name="type" id="@cdk8s/aws-cdk.S3BucketMapper.property.type"></a>
+##### `type`<sup>Required</sup> <a name="type" id="cdk8s-aws-cdk.S3BucketMapper.property.type"></a>
 
 ```typescript
 public readonly type: string;
@@ -2182,23 +2182,23 @@ public readonly type: string;
 
 ## Enums <a name="Enums" id="Enums"></a>
 
-### CloudFormationMapperRefMapping <a name="CloudFormationMapperRefMapping" id="@cdk8s/aws-cdk.CloudFormationMapperRefMapping"></a>
+### CloudFormationMapperRefMapping <a name="CloudFormationMapperRefMapping" id="cdk8s-aws-cdk.CloudFormationMapperRefMapping"></a>
 
 #### Members <a name="Members" id="Members"></a>
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping.NAME">NAME</a></code> | *No description.* |
-| <code><a href="#@cdk8s/aws-cdk.CloudFormationMapperRefMapping.ARN">ARN</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping.NAME">NAME</a></code> | *No description.* |
+| <code><a href="#cdk8s-aws-cdk.CloudFormationMapperRefMapping.ARN">ARN</a></code> | *No description.* |
 
 ---
 
-##### `NAME` <a name="NAME" id="@cdk8s/aws-cdk.CloudFormationMapperRefMapping.NAME"></a>
+##### `NAME` <a name="NAME" id="cdk8s-aws-cdk.CloudFormationMapperRefMapping.NAME"></a>
 
 ---
 
 
-##### `ARN` <a name="ARN" id="@cdk8s/aws-cdk.CloudFormationMapperRefMapping.ARN"></a>
+##### `ARN` <a name="ARN" id="cdk8s-aws-cdk.CloudFormationMapperRefMapping.ARN"></a>
 
 ---
 
