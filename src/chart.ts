@@ -2,6 +2,7 @@ import * as aws from 'aws-cdk-lib';
 import * as k from 'cdk8s';
 import { Construct } from 'constructs';
 import * as adapter from './adapter';
+import * as mappers from './mappers';
 
 const STACK_SYMBOL = Symbol.for('@aws-cdk/core.Stack');
 
@@ -60,15 +61,11 @@ export class Chart extends k.Chart {
     }
   }
 
+  /**
+   * Registers a new mapper.
+   */
+  protected registerMapper(mapper: mappers.CloudFormationResourceMapper) {
+    this.adapter.registerMapper(mapper);
+  }
+
 }
-
-// function getAllProperties(adp: adapter.AwsCdkAdapater) {
-
-//   let properties = new Set();
-//   let currentObj = adp;
-//   do {
-//     Object.getOwnPropertyNames(currentObj).map(item => properties.add(item));
-//   } while ((currentObj = Object.getPrototypeOf(currentObj)));
-//   return properties.keys();
-
-// }

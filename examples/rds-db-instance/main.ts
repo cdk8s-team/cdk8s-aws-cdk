@@ -8,6 +8,9 @@ import * as kplus from 'cdk8s-plus-24';
 import { Construct } from 'constructs';
 import { Chart } from '../../src';
 
+/**
+ * Creates a PostgreSQL backed RDS DB instance.
+ */
 export class PostgreSQL extends Construct {
 
   public readonly address: string;
@@ -41,14 +44,26 @@ export class PostgreSQL extends Construct {
   }
 }
 
+/**
+ * Properties for `Workload`.
+ */
 export interface WorkloadProps {
 
+  /**
+   * Address of the database to connect to.
+   */
   readonly dbAddress: string;
 
+  /**
+   * Port of the database to connect to.
+   */
   readonly dbPort: string;
 
 }
 
+/**
+ * Creates a Kubernetes deployment that runs our application code.
+ */
 export class Workload extends Construct {
 
   private static readonly DB_ADDRESS_ENV = 'DB_ADDRESS';
@@ -71,6 +86,9 @@ export class Workload extends Construct {
   }
 }
 
+/**
+ * Combines the database and workload into a single application.
+ */
 export class RdsDBInstanceChart extends Chart {
 
   constructor(scope: Construct, id: string, props: k.ChartProps = {}) {
@@ -87,6 +105,9 @@ export class RdsDBInstanceChart extends Chart {
 
 }
 
+/**
+ * Deploys the RDS instance with AWS CDK.
+ */
 export class RdsDBInstanceStack extends aws.Stack {
 
   constructor(scope: Construct, id: string, props: aws.StackProps = {}) {
