@@ -24,6 +24,8 @@ const project = new cdk.JsiiProject({
   },
 });
 
+project.addFields({ private: true });
+
 for (const example of ['rds-db-instance']) {
   const exampleDir = `examples/${example}`;
   const synth = project.addTask(`synth:${example}`);
