@@ -106,7 +106,7 @@ export class RdsDBInstanceChart extends Chart {
 }
 
 /**
- * Deploys the RDS instance with AWS CDK.
+ * Deploys the RDS instance with AWS
  */
 export class RdsDBInstanceStack extends aws.Stack {
 

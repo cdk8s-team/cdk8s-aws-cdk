@@ -21,19 +21,21 @@ export class S3BucketMapper extends base.CloudFormationResourceMapper {
     const lambdaFunctionConfigurations: ks3buckets.BucketSpecNotificationLambdaFunctionConfigurations[] = [];
     const cfnNotifications = properties.notificationConfiguration as s3.CfnBucket.NotificationConfigurationProperty;
 
-    for (const config of (cfnNotifications.lambdaConfigurations as Array<s3.CfnBucket.LambdaConfigurationProperty>) ?? []) {
-      const filter = (config.filter as s3.CfnBucket.NotificationFilterProperty);
-      const s3Key = filter.s3Key as s3.CfnBucket.S3KeyFilterProperty;
-      const rules = s3Key.rules as Array<s3.CfnBucket.FilterRuleProperty>;
-      lambdaFunctionConfigurations.push({
-        events: [config.event],
-        filter: {
-          key: {
-            filterRules: rules.map(r => ({ name: r.name, value: r.value })),
+    if (cfnNotifications) {
+      for (const config of (cfnNotifications.lambdaConfigurations as Array<s3.CfnBucket.LambdaConfigurationProperty>) ?? []) {
+        const filter = (config.filter as s3.CfnBucket.NotificationFilterProperty);
+        const s3Key = filter.s3Key as s3.CfnBucket.S3KeyFilterProperty;
+        const rules = s3Key.rules as Array<s3.CfnBucket.FilterRuleProperty>;
+        lambdaFunctionConfigurations.push({
+          events: [config.event],
+          filter: {
+            key: {
+              filterRules: rules.map(r => ({ name: r.name, value: r.value })),
+            },
           },
-        },
-        lambdaFunctionArn: config.function,
-      });
+          lambdaFunctionArn: config.function,
+        });
+      }
     }
 
     return new ks3buckets.Bucket(this.chart, logicalId, {
