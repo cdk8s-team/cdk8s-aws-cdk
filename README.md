@@ -132,7 +132,12 @@ import * as awscdkadapter from '@cdk8s/aws-cdk'
 
 export class KmsKeyMapper extends awscdkadapter.CloudFormationResourceMapper {
 
-  // implement the required methods and properties
+  /**
+   * @see CloudFormationResourceMapper.type
+   */
+  public readonly type: string = 'AWS::KMS::Key';
+
+  // implement the additional required methods and properties
   ...
 }
 ```
