@@ -2,7 +2,7 @@
   "name": "cdk8s-aws-cdk",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cdk8s-team/cdk8s-aws-cdk.git"
+    "url": "https://github.com/cdk8s-team/cdk8s-aws-cdk.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -36,6 +36,7 @@
     "organization": false
   },
   "devDependencies": {
+    "@cdk8s/projen-common": "^0.0.246",
     "@types/jest": "^27.5.1",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -68,6 +69,9 @@
   },
   "dependencies": {
     "cdk8s-plus-24": "^2.0.0-beta.1"
+  },
+  "engines": {
+    "node": ">= 14.17.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
