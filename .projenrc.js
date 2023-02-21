@@ -1,14 +1,18 @@
+const { Cdk8sTeamJsiiProject } = require('@cdk8s/projen-common');
 const { cdk } = require('projen');
-const project = new cdk.JsiiProject({
+
+const project = new Cdk8sTeamJsiiProject({
   name: 'cdk8s-aws-cdk',
-  author: 'Amazon Web Services',
-  authorAddress: 'https://aws.amazon.com',
   defaultReleaseBranch: 'main',
-  repositoryUrl: 'git@github.com:cdk8s-team/cdk8s-aws-cdk.git',
+  golang: false,
+  maven: false,
+  nuget: false,
+  pypi: false,
   peerDependencyOptions: {
     pinnedDevDependency: true,
   },
   devDeps: [
+    '@cdk8s/projen-common',
     'ts-node',
   ],
   deps: [
