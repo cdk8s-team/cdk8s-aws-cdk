@@ -44,8 +44,10 @@ new AwsCdkAdapater(scope: Construct, id: string, props: AwsCdkAdapterProps)
 | --- | --- |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.toString">toString</a></code> | Returns a string representation of this construct. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addDependency">addDependency</a></code> | Add a dependency between this stack and another stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addMetadata">addMetadata</a></code> | Adds an arbitary key-value pair, with information you want to record about the stack. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addTransform">addTransform</a></code> | Add a Transform to this stack. A Transform is a macro that AWS CloudFormation uses to process your template. |
-| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.exportValue">exportValue</a></code> | Create a CloudFormation Export for a value. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.exportStringListValue">exportStringListValue</a></code> | Create a CloudFormation Export for a string list value. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.exportValue">exportValue</a></code> | Create a CloudFormation Export for a string value. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.formatArn">formatArn</a></code> | Creates an ARN from components. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.getLogicalId">getLogicalId</a></code> | Allocates a stack-unique CloudFormation-compatible logical identity for a specific resource. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.regionalFact">regionalFact</a></code> | Look up a fact value for the given fact for the region of this stack. |
@@ -91,6 +93,30 @@ app, and also supports nested stacks.
 
 ---
 
+##### `addMetadata` <a name="addMetadata" id="cdk8s-aws-cdk.AwsCdkAdapater.addMetadata"></a>
+
+```typescript
+public addMetadata(key: string, value: any): void
+```
+
+Adds an arbitary key-value pair, with information you want to record about the stack.
+
+These get translated to the Metadata section of the generated template.
+
+> [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)
+
+###### `key`<sup>Required</sup> <a name="key" id="cdk8s-aws-cdk.AwsCdkAdapater.addMetadata.parameter.key"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdk8s-aws-cdk.AwsCdkAdapater.addMetadata.parameter.value"></a>
+
+- *Type:* any
+
+---
+
 ##### `addTransform` <a name="addTransform" id="cdk8s-aws-cdk.AwsCdkAdapater.addTransform"></a>
 
 ```typescript
@@ -120,13 +146,51 @@ The transform to add.
 
 ---
 
+##### `exportStringListValue` <a name="exportStringListValue" id="cdk8s-aws-cdk.AwsCdkAdapater.exportStringListValue"></a>
+
+```typescript
+public exportStringListValue(exportedValue: any, options?: ExportValueOptions): string[]
+```
+
+Create a CloudFormation Export for a string list value.
+
+Returns a string list representing the corresponding `Fn.importValue()`
+expression for this Export. The export expression is automatically wrapped with an
+`Fn::Join` and the import value with an `Fn::Split`, since CloudFormation can only
+export strings. You can control the name for the export by passing the `name` option.
+
+If you don't supply a value for `name`, the value you're exporting must be
+a Resource attribute (for example: `bucket.bucketName`) and it will be
+given the same name as the automatic cross-stack reference that would be created
+if you used the attribute in another Stack.
+
+One of the uses for this method is to *remove* the relationship between
+two Stacks established by automatic cross-stack references. It will
+temporarily ensure that the CloudFormation Export still exists while you
+remove the reference from the consuming stack. After that, you can remove
+the resource and the manual export.
+
+See `exportValue` for an example of this process.
+
+###### `exportedValue`<sup>Required</sup> <a name="exportedValue" id="cdk8s-aws-cdk.AwsCdkAdapater.exportStringListValue.parameter.exportedValue"></a>
+
+- *Type:* any
+
+---
+
+###### `options`<sup>Optional</sup> <a name="options" id="cdk8s-aws-cdk.AwsCdkAdapater.exportStringListValue.parameter.options"></a>
+
+- *Type:* aws-cdk-lib.ExportValueOptions
+
+---
+
 ##### `exportValue` <a name="exportValue" id="cdk8s-aws-cdk.AwsCdkAdapater.exportValue"></a>
 
 ```typescript
 public exportValue(exportedValue: any, options?: ExportValueOptions): string
 ```
 
-Create a CloudFormation Export for a value.
+Create a CloudFormation Export for a string value.
 
 Returns a string representing the corresponding `Fn.importValue()`
 expression for this Export. You can control the name for the export by
@@ -199,7 +263,7 @@ into the generated ARN at the location that component corresponds to.
 
 The ARN will be formatted as follows:
 
-   arn:{partition}:{service}:{region}:{account}:{resource}{sep}}{resource-name}
+   arn:{partition}:{service}:{region}:{account}:{resource}{sep}{resource-name}
 
 The required ARN pieces that are omitted will be taken from the stack that
 the 'scope' is attached to. If all ARN pieces are supplied, the supplied scope
@@ -557,14 +621,14 @@ The AWS account into which this stack will be deployed.
 This value is resolved according to the following rules:
 
 1. The value provided to `env.account` when the stack is defined. This can
-    either be a concerete account (e.g. `585695031111`) or the
-    `Aws.accountId` token.
-3. `Aws.accountId`, which represents the CloudFormation intrinsic reference
+    either be a concrete account (e.g. `585695031111`) or the
+    `Aws.ACCOUNT_ID` token.
+3. `Aws.ACCOUNT_ID`, which represents the CloudFormation intrinsic reference
     `{ "Ref": "AWS::AccountId" }` encoded as a string token.
 
 Preferably, you should use the return value as an opaque string and not
 attempt to parse it to implement your logic. If you do, you must first
-check that it is a concerete value an not an unresolved token. If this
+check that it is a concrete value an not an unresolved token. If this
 value is an unresolved token (`Token.isUnresolved(stack.account)` returns
 `true`), this implies that the user wishes that this stack will synthesize
 into a **account-agnostic template**. In this case, your code should either
@@ -650,7 +714,7 @@ You can use this value to determine if two stacks are targeting the same
 environment.
 
 If either `stack.account` or `stack.region` are not concrete values (e.g.
-`Aws.account` or `Aws.region`) the special strings `unknown-account` and/or
+`Aws.ACCOUNT_ID` or `Aws.REGION`) the special strings `unknown-account` and/or
 `unknown-region` will be used respectively to indicate this stack is
 region/account-agnostic.
 
@@ -705,14 +769,14 @@ The AWS region into which this stack will be deployed (e.g. `us-west-2`).
 This value is resolved according to the following rules:
 
 1. The value provided to `env.region` when the stack is defined. This can
-    either be a concerete region (e.g. `us-west-2`) or the `Aws.region`
+    either be a concrete region (e.g. `us-west-2`) or the `Aws.REGION`
     token.
-3. `Aws.region`, which is represents the CloudFormation intrinsic reference
+3. `Aws.REGION`, which is represents the CloudFormation intrinsic reference
     `{ "Ref": "AWS::Region" }` encoded as a string token.
 
 Preferably, you should use the return value as an opaque string and not
 attempt to parse it to implement your logic. If you do, you must first
-check that it is a concerete value an not an unresolved token. If this
+check that it is a concrete value an not an unresolved token. If this
 value is an unresolved token (`Token.isUnresolved(stack.region)` returns
 `true`), this implies that the user wishes that this stack will synthesize
 into a **region-agnostic template**. In this case, your code should either
@@ -758,7 +822,7 @@ name. Stacks that are defined deeper within the tree will use a hashed naming
 scheme based on the construct path to ensure uniqueness.
 
 If you wish to obtain the deploy-time AWS::StackName intrinsic,
-you can use `Aws.stackName` directly.
+you can use `Aws.STACK_NAME` directly.
 
 ---
 
@@ -1119,8 +1183,10 @@ const awsCdkAdapterProps: AwsCdkAdapterProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.analyticsReporting">analyticsReporting</a></code> | <code>boolean</code> | Include runtime versioning information in this Stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.crossRegionReferences">crossRegionReferences</a></code> | <code>boolean</code> | Enable this flag to allow native cross region stack references. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.description">description</a></code> | <code>string</code> | A description of the stack. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.env">env</a></code> | <code>aws-cdk-lib.Environment</code> | The AWS environment (account/region) where this stack will be deployed. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.permissionsBoundary">permissionsBoundary</a></code> | <code>aws-cdk-lib.PermissionsBoundary</code> | Options for applying a permissions boundary to all IAM Roles and Users created within this Stage. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.stackName">stackName</a></code> | <code>string</code> | Name to deploy the stack with. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.synthesizer">synthesizer</a></code> | <code>aws-cdk-lib.IStackSynthesizer</code> | Synthesis method to use while deploying this stack. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Stack tags that will be applied to all the taggable resources and the stack itself. |
@@ -1139,6 +1205,24 @@ public readonly analyticsReporting: boolean;
 - *Default:* `analyticsReporting` setting of containing `App`, or value of 'aws:cdk:version-reporting' context key
 
 Include runtime versioning information in this Stack.
+
+---
+
+##### `crossRegionReferences`<sup>Optional</sup> <a name="crossRegionReferences" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.crossRegionReferences"></a>
+
+```typescript
+public readonly crossRegionReferences: boolean;
+```
+
+- *Type:* boolean
+- *Default:* false
+
+Enable this flag to allow native cross region stack references.
+
+Enabling this will create a CloudFormation custom resource
+in both the producing stack and consuming stack in order to perform the export/import
+
+This feature is currently experimental
 
 ---
 
@@ -1229,6 +1313,19 @@ new MyStack(app, 'Stack1');
 ```
 
 
+##### `permissionsBoundary`<sup>Optional</sup> <a name="permissionsBoundary" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.permissionsBoundary"></a>
+
+```typescript
+public readonly permissionsBoundary: PermissionsBoundary;
+```
+
+- *Type:* aws-cdk-lib.PermissionsBoundary
+- *Default:* no permissions boundary is applied
+
+Options for applying a permissions boundary to all IAM Roles and Users created within this Stage.
+
+---
+
 ##### `stackName`<sup>Optional</sup> <a name="stackName" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.stackName"></a>
 
 ```typescript
@@ -1249,9 +1346,19 @@ public readonly synthesizer: IStackSynthesizer;
 ```
 
 - *Type:* aws-cdk-lib.IStackSynthesizer
-- *Default:* `DefaultStackSynthesizer` if the `@aws-cdk/core:newStyleStackSynthesis` feature flag is set, `LegacyStackSynthesizer` otherwise.
+- *Default:* The synthesizer specified on `App`, or `DefaultStackSynthesizer` otherwise.
 
 Synthesis method to use while deploying this stack.
+
+The Stack Synthesizer controls aspects of synthesis and deployment,
+like how assets are referenced and what IAM roles to use. For more
+information, see the README of the main CDK package.
+
+If not specified, the `defaultStackSynthesizer` from `App` will be used.
+If that is not specified, `DefaultStackSynthesizer` is used if
+`@aws-cdk/core:newStyleStackSynthesis` is set to `true` or the CDK major
+version is v2. In CDK v1 `LegacyStackSynthesizer` is the default if no
+other synthesizer is specified.
 
 ---
 

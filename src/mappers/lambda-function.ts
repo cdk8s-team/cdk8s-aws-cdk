@@ -1,7 +1,7 @@
 import { aws_lambda as lambda } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
-import * as klambdafunctions from '../imports/lambdafunctions-lambda.services.k8s.aws';
 import * as base from './base';
+import * as klambdafunctions from '../imports/lambdafunctions-lambda.services.k8s.aws';
 
 export class LambdaFunctionMapper extends base.CloudFormationResourceMapper {
 

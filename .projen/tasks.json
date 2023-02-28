@@ -88,9 +88,6 @@
       "steps": [
         {
           "exec": "jsii --silence-warnings=reserved-word"
-        },
-        {
-          "spawn": "synth:rds-db-instance"
         }
       ]
     },

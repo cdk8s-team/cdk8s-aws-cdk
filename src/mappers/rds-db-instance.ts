@@ -1,8 +1,8 @@
 import { aws_rds as rds } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
 import * as kplus from 'cdk8s-plus-24';
-import * as krdsdbinstances from '../imports/rdsdbinstances-rds.services.k8s.aws';
 import * as base from './base';
+import * as krdsdbinstances from '../imports/rdsdbinstances-rds.services.k8s.aws';
 
 const PASSWORD_SECRET_KEY = 'password';
 
@@ -37,7 +37,7 @@ export class RdsDBInstanceMapper extends base.CloudFormationResourceMapper {
       spec: {
         dbName: properties.dbName,
         dbClusterIdentifier: properties.dbInstanceIdentifier,
-        dbInstanceClass: properties.dbInstanceClass,
+        dbInstanceClass: properties.dbInstanceClass!,
         allocatedStorage: properties.allocatedStorage ? parseInt(properties.allocatedStorage) : undefined,
         copyTagsToSnapshot: properties.copyTagsToSnapshot as boolean,
         dbSubnetGroupName: properties.dbSubnetGroupName,

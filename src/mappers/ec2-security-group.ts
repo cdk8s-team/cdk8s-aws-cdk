@@ -1,7 +1,7 @@
 import { aws_ec2 as ec2 } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
-import * as kec2securitygroups from '../imports/ec2securitygroups-ec2.services.k8s.aws';
 import * as base from './base';
+import * as kec2securitygroups from '../imports/ec2securitygroups-ec2.services.k8s.aws';
 
 export class Ec2SecurityGroupMapper extends base.CloudFormationResourceMapper {
 
