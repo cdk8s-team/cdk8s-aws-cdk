@@ -1,7 +1,7 @@
 import { aws_s3 as s3 } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
-import * as ks3buckets from '../imports/s3buckets-s3.services.k8s.aws';
 import * as base from './base';
+import * as ks3buckets from '../imports/s3buckets-s3.services.k8s.aws';
 
 export class S3BucketMapper extends base.CloudFormationResourceMapper {
 

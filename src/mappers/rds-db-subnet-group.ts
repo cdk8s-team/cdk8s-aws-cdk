@@ -1,7 +1,7 @@
 import { aws_rds as rds } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
-import * as krdsdbsubnetgroups from '../imports/rdsdbsubnetgroups-rds.services.k8s.aws';
 import * as base from './base';
+import * as krdsdbsubnetgroups from '../imports/rdsdbsubnetgroups-rds.services.k8s.aws';
 
 
 export class RdsDBSubnetGroup extends base.CloudFormationResourceMapper {

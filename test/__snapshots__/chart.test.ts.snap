@@ -11,7 +11,7 @@ Array [
     "spec": Object {
       "minReadySeconds": 0,
       "progressDeadlineSeconds": 600,
-      "replicas": 1,
+      "replicas": 2,
       "selector": Object {
         "matchLabels": Object {
           "cdk8s.io/metadata.addr": "RdsDBInstanceChart-Application-c86ef48c",
@@ -31,7 +31,7 @@ Array [
           },
         },
         "spec": Object {
-          "automountServiceAccountToken": true,
+          "automountServiceAccountToken": false,
           "containers": Array [
             Object {
               "env": Array [
@@ -62,17 +62,35 @@ Array [
                   "containerPort": 8080,
                 },
               ],
+              "resources": Object {
+                "limits": Object {
+                  "cpu": "1500m",
+                  "memory": "2048Mi",
+                },
+                "requests": Object {
+                  "cpu": "1000m",
+                  "memory": "512Mi",
+                },
+              },
               "securityContext": Object {
+                "allowPrivilegeEscalation": false,
                 "privileged": false,
-                "readOnlyRootFilesystem": false,
-                "runAsNonRoot": false,
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+              },
+              "startupProbe": Object {
+                "failureThreshold": 3,
+                "tcpSocket": Object {
+                  "port": 8080,
+                },
               },
             },
           ],
           "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
           "securityContext": Object {
             "fsGroupChangePolicy": "Always",
-            "runAsNonRoot": false,
+            "runAsNonRoot": true,
           },
           "setHostnameAsFQDN": false,
         },

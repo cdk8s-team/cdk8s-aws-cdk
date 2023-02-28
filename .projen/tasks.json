@@ -88,9 +88,6 @@
       "steps": [
         {
           "exec": "jsii --silence-warnings=reserved-word"
-        },
-        {
-          "spawn": "synth:rds-db-instance"
         }
       ]
     },
@@ -138,7 +135,7 @@
       "description": "Creates the distribution package",
       "steps": [
         {
-          "exec": "if [ ! -z ${CI} ]; then mkdir -p dist && rsync -a . dist --exclude .git --exclude node_modules; else npx projen package-all; fi"
+          "exec": "if [ ! -z ${CI} ]; then rsync -a . .repo --exclude .git --exclude node_modules && rm -rf dist && mv .repo dist; else npx projen package-all; fi"
         }
       ]
     },
@@ -215,19 +212,11 @@
       "description": "Run tests",
       "steps": [
         {
-          "exec": "jest --passWithNoTests --all --updateSnapshot --coverageProvider=v8"
+          "exec": "jest --passWithNoTests --coverageProvider=v8 --updateSnapshot",
+          "receiveArgs": true
         },
         {
           "spawn": "eslint"
-        }
-      ]
-    },
-    "test:update": {
-      "name": "test:update",
-      "description": "Update jest snapshots",
-      "steps": [
-        {
-          "exec": "jest --updateSnapshot"
         }
       ]
     },

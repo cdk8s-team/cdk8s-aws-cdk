@@ -1,7 +1,7 @@
 import { aws_iam as iam } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
-import * as kiampolicies from '../imports/iampolicies-iam.services.k8s.aws';
 import * as base from './base';
+import * as kiampolicies from '../imports/iampolicies-iam.services.k8s.aws';
 
 export class IamPolicyMapper extends base.CloudFormationResourceMapper {
 
