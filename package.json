@@ -35,14 +35,14 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.286",
+    "@cdk8s/projen-common": "^0.0.287",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.69.0",
-    "cdk8s": "2.7.34",
-    "constructs": "10.1.279",
+    "cdk8s": "2.7.35",
+    "constructs": "10.1.280",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -51,10 +51,10 @@
     "jest-junit": "^13",
     "jsii": "^1.78.1",
     "jsii-diff": "^1.78.1",
-    "jsii-docgen": "^7.1.27",
+    "jsii-docgen": "^7.1.28",
     "jsii-pacmak": "^1.78.1",
     "npm-check-updates": "^16",
-    "projen": "^0.68.5",
+    "projen": "^0.68.10",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
@@ -62,11 +62,11 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.69.0",
-    "cdk8s": "^2.7.34",
-    "constructs": "^10.1.279"
+    "cdk8s": "^2.7.35",
+    "constructs": "^10.1.280"
   },
   "dependencies": {
-    "cdk8s-plus-24": "^2.6.0"
+    "cdk8s-plus-24": "^2.6.1"
   },
   "engines": {
     "node": ">= 14.17.0"
