@@ -35,7 +35,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.319",
+    "@cdk8s/projen-common": "^0.0.320",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -54,7 +54,7 @@
     "jsii-docgen": "^7.2.1",
     "jsii-pacmak": "^1.80.0",
     "npm-check-updates": "^16",
-    "projen": "^0.71.23",
+    "projen": "^0.71.25",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
@@ -66,7 +66,7 @@
     "constructs": "^10.2.6"
   },
   "dependencies": {
-    "cdk8s-plus-24": "^2.7.7"
+    "cdk8s-plus-24": "^2.7.8"
   },
   "resolutions": {
     "@types/prettier": "2.6.0",
