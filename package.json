@@ -35,14 +35,14 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.336",
+    "@cdk8s/projen-common": "^0.0.337",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.79.1",
-    "cdk8s": "2.7.58",
-    "constructs": "10.2.19",
+    "cdk8s": "2.7.59",
+    "constructs": "10.2.21",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -54,7 +54,7 @@
     "jsii-docgen": "^7.2.9",
     "jsii-pacmak": "^1.81.0",
     "npm-check-updates": "^16",
-    "projen": "^0.71.52",
+    "projen": "^0.71.53",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
@@ -62,11 +62,11 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.79.1",
-    "cdk8s": "^2.7.58",
-    "constructs": "^10.2.19"
+    "cdk8s": "^2.7.59",
+    "constructs": "^10.2.21"
   },
   "dependencies": {
-    "cdk8s-plus-24": "^2.7.25"
+    "cdk8s-plus-24": "^2.7.26"
   },
   "resolutions": {
     "@types/prettier": "2.6.0",
