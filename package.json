@@ -25,7 +25,8 @@
     "test": "npx projen test",
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
-    "upgrade": "npx projen upgrade",
+    "upgrade-configuration": "npx projen upgrade-configuration",
+    "upgrade-dependencies": "npx projen upgrade-dependencies",
     "watch": "npx projen watch",
     "projen": "npx projen"
   },
@@ -35,14 +36,14 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "^0.0.340",
+    "@cdk8s/projen-common": "^0.0.343",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.79.1",
-    "cdk8s": "2.7.64",
-    "constructs": "10.2.24",
+    "cdk8s": "2.7.67",
+    "constructs": "10.2.25",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -54,7 +55,7 @@
     "jsii-docgen": "^7.2.9",
     "jsii-pacmak": "^1.81.0",
     "npm-check-updates": "^16",
-    "projen": "^0.71.56",
+    "projen": "^0.71.57",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
@@ -62,11 +63,11 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.79.1",
-    "cdk8s": "^2.7.64",
-    "constructs": "^10.2.24"
+    "cdk8s": "^2.7.67",
+    "constructs": "^10.2.25"
   },
   "dependencies": {
-    "cdk8s-plus-24": "^2.7.29"
+    "cdk8s-plus-24": "^2.7.30"
   },
   "resolutions": {
     "@types/prettier": "2.6.0",
