@@ -1817,10 +1817,10 @@ case@1.6.3, case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s-plus-24@^2.7.36:
-  version "2.7.36"
-  resolved "https://registry.yarnpkg.com/cdk8s-plus-24/-/cdk8s-plus-24-2.7.36.tgz#e87d39d61064e3ebf7bc299fcf0cb5bee20da290"
-  integrity sha512-xVmsioCkyMyawQZVThCHOKE1OFayHGu5kChL19/hLpFrf48kPtcKt00v5ak6/qRkXdO1HukuozM+lGVYwNpDng==
+cdk8s-plus-24@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-24/-/cdk8s-plus-24-2.8.0.tgz#126d2e1311a165b564e547e8fa256ebf491893be"
+  integrity sha512-jScFtH7M/mysPULZ3WF8ffmmpBkKozoQLcVceEX6uuW4b4UArgP9C5lQW4M7nNHm30hGsZyN9keOMWsWfyUboA==
   dependencies:
     minimatch "^3.1.2"
 
@@ -2556,9 +2556,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.403"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.403.tgz#8b4666d1ea6cf97e03c1ed39ded1f25212865ecc"
-  integrity sha512-evCMqXJWmbQHdlh307peXNguqVIMmcLGrQwXiR+Qc98js8jPDeT9rse1+EF2YRjWgueuzj1r4WWLAe4/U+xjMg==
+  version "1.4.405"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.405.tgz#487bdba2d82a59b092d6b6e4602bf733cec6a7ef"
+  integrity sha512-JdDgnwU69FMZURoesf9gNOej2Cms1XJFfLk24y1IBtnAdhTcJY/mXnokmpmxHN59PcykBP4bgUU98vLY44Lhuw==
 
 emittery@^0.8.1:
   version "0.8.1"

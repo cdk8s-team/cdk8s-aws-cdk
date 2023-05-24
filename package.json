@@ -67,7 +67,7 @@
     "constructs": "^10.2.31"
   },
   "dependencies": {
-    "cdk8s-plus-24": "^2.7.36"
+    "cdk8s-plus-24": "^2.8.0"
   },
   "resolutions": {
     "@types/prettier": "2.6.0",
