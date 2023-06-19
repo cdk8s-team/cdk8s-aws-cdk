@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 "@aws-cdk/asset-awscli-v1@^2.2.177":
-  version "2.2.193"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.193.tgz#e98f973273a5f5cc7ffff8e7f69b33d4d2135ffe"
-  integrity sha512-liDhF15WsW2/w7q20o4WQtuxOTkIk+XYKhQ9E4g6A59sJQi56x1Lo4pHLepm3lMAY3Hu43Uz/rQ6FjQt4wsuiw==
+  version "2.2.194"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.194.tgz#d46358da37ed01b9fd2dcab51668e81a76bb17c9"
+  integrity sha512-6u6VZ/KoMQQeX5jK/aNMtZM0TM5SkaNBt8JFdlzGf2cDxddWpJYsvsN2ClFAmvgYg/HPl57vp9kxI57Af2CBIw==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.2"
@@ -1781,10 +1781,10 @@ case@1.6.3, case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s-plus-24@^2.8.35:
-  version "2.8.35"
-  resolved "https://registry.yarnpkg.com/cdk8s-plus-24/-/cdk8s-plus-24-2.8.35.tgz#25b4f8aef87f5cf693cca84b9ac0e7387ad37bdd"
-  integrity sha512-WqwzyhOpGeOKaNvfIjFlz9jMtnrCda145mujNpyL67byx9AKsQTUl6pUne82qiEVOkpu+6YcbaAl3aOIgQLzjA==
+cdk8s-plus-24@^2.8.37:
+  version "2.8.37"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-24/-/cdk8s-plus-24-2.8.37.tgz#c8973ee4bbd2bcf9a0175f9ab2a3a112108e6c83"
+  integrity sha512-YvJeK+8koBlDSHZ7j9zgxBxVVgwcg6hYQNWhvJpcRm9jgkxjp+LTvL9Chbvmn/VEVyF5Wj24djCRKPm6pQ9X1Q==
   dependencies:
     minimatch "^3.1.2"
 
