@@ -42,8 +42,8 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.85.0",
-    "cdk8s": "2.7.85",
-    "constructs": "10.2.61",
+    "cdk8s": "2.7.86",
+    "constructs": "10.2.62",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -63,11 +63,11 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.85.0",
-    "cdk8s": "^2.7.85",
-    "constructs": "^10.2.61"
+    "cdk8s": "^2.7.86",
+    "constructs": "^10.2.62"
   },
   "dependencies": {
-    "cdk8s-plus-24": "^2.8.53"
+    "cdk8s-plus-24": "^2.8.55"
   },
   "resolutions": {
     "@types/babel__traverse": "7.18.2",
