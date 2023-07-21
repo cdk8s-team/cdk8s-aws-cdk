@@ -66,5 +66,6 @@ tsconfig.json
 !/.github/workflows/stale.yml
 !/.github/workflows/upgrade-configuration-main.yml
 !/.github/workflows/upgrade-dev-dependencies-main.yml
+!/.github/workflows/upgrade-compiler-dependencies-main.yml
 /examples/rds-db-instance/cdk.out/**
 !/examples/rds-db-instance/cdk.out/*.template.json
