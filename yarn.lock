@@ -1817,10 +1817,10 @@ cdk8s-plus-24@^2.12.1:
   dependencies:
     minimatch "^3.1.2"
 
-cdk8s@2.48.0:
-  version "2.48.0"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.48.0.tgz#5119442ffe3cc750ae770c3e4f8c8e3bd026644a"
-  integrity sha512-Yr3WXEAMRiD9IjVXK8QYq5FNc6JPKgvyZZa+p8JQj0tUjtQyhI1FfGZV9G8JJVzxfqtWFZNGLAiyOekzzhdefw==
+cdk8s@2.49.0:
+  version "2.49.0"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.49.0.tgz#3a00a385db7912eaabf88ad543314dc8688383ca"
+  integrity sha512-GoIb5UzY2PKHh8T7i71zQaTWmfHGc66fWEFU5s18GEILfw6HSRKj9HyoHOZk1VeqowejbccDcNXz1ur1eHKslg==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
