@@ -1505,10 +1505,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-aws-cdk-lib@2.92.0:
-  version "2.92.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.92.0.tgz#6f036e8fb73dc7196aac71e4b22658d8226b8ce5"
-  integrity sha512-J+SUFSnOt9u2GbY5QIABgjGNiw8bL/v0S3zsPhhO1dVwK+G7oE+bhLcAi3iILrw2sIpirNWH9K3W0by9K+cyMw==
+aws-cdk-lib@2.93.0:
+  version "2.93.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.93.0.tgz#545bc0072bc0f2e27cb0fecb0c9e54de29b10731"
+  integrity sha512-kKbcKkts272Ju5xjGKI3pXTOpiJxW4OQbDF8Vmw/NIkkuJLo8GlRCFfeOfoN/hilvlYQgENA67GCgSWccbvu7w==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.200"
     "@aws-cdk/asset-kubectl-v20" "^2.1.2"
@@ -1817,10 +1817,10 @@ cdk8s-plus-24@^2.12.1:
   dependencies:
     minimatch "^3.1.2"
 
-cdk8s@2.54.0:
-  version "2.54.0"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.54.0.tgz#64ae273515fe680c1502cc3993c416573e0406c2"
-  integrity sha512-wU/ck1PMRh/puq6Tr96OCFQsFlYJi+bCUirS/MIdLu/6zF+ohknX2BoQ3WilmXtCaLC/AGN1BgAT2KtoYwgK2w==
+cdk8s@2.55.0:
+  version "2.55.0"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.55.0.tgz#987a77a87628398fe0aaed08a55b98f17590c180"
+  integrity sha512-ZF3hLiKjts+Kp5hJevd8+DXwT0Aek3DLnCE88bnbvC8Ps766nGNGsq8GJPJ1CAHPfpvRqCq9cNkrqxsQnpvdUg==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
@@ -5090,9 +5090,9 @@ neo-async@^2.6.2:
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 node-fetch@^2.6.7:
-  version "2.6.13"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.13.tgz#a20acbbec73c2e09f9007de5cda17104122e0010"
-  integrity sha512-StxNAxh15zr77QvvkmveSQ8uCQ4+v5FkvNTj0OESmiHu+VRi/gXArXtkWMElOsOUNLtUEvI4yS+rdtOHZTwlQA==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
+  integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
   dependencies:
     whatwg-url "^5.0.0"
 
