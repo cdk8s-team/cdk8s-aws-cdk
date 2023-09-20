@@ -66,7 +66,7 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.96.2",
-    "cdk8s": "^2.64.13",
+    "cdk8s": "^2.64.15",
     "constructs": "^10.2.70"
   },
   "dependencies": {
