@@ -4,7 +4,7 @@ import {
 } from 'aws-cdk-lib';
 import * as aws from 'aws-cdk-lib';
 import * as k from 'cdk8s';
-import * as kplus from 'cdk8s-plus-24';
+import * as kplus from 'cdk8s-plus-27';
 import { Construct } from 'constructs';
 import * as awscdkadapter from '../../src';
 
