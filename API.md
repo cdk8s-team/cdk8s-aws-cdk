@@ -1338,6 +1338,7 @@ a construct node.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#cdk8s-aws-cdk.Chart.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdk8s-aws-cdk.Chart.property.apiObjects">apiObjects</a></code> | <code>cdk8s.ApiObject[]</code> | Returns all the included API objects. |
 | <code><a href="#cdk8s-aws-cdk.Chart.property.labels">labels</a></code> | <code>{[ key: string ]: string}</code> | Labels applied to all resources in this chart. |
 | <code><a href="#cdk8s-aws-cdk.Chart.property.namespace">namespace</a></code> | <code>string</code> | The default namespace for all objects in this chart. |
 
@@ -1352,6 +1353,18 @@ public readonly node: Node;
 - *Type:* constructs.Node
 
 The tree node.
+
+---
+
+##### `apiObjects`<sup>Required</sup> <a name="apiObjects" id="cdk8s-aws-cdk.Chart.property.apiObjects"></a>
+
+```typescript
+public readonly apiObjects: ApiObject[];
+```
+
+- *Type:* cdk8s.ApiObject[]
+
+Returns all the included API objects.
 
 ---
 

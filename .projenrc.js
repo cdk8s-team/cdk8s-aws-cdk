@@ -15,7 +15,7 @@ const project = new Cdk8sTeamJsiiProject({
     'ts-node',
   ],
   deps: [
-    'cdk8s-plus-24',
+    'cdk8s-plus-27',
   ],
   peerDeps: [
     'cdk8s',
