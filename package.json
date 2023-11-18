@@ -65,11 +65,11 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.110.0",
-    "cdk8s": "^2.68.5",
+    "cdk8s": "^2.68.6",
     "constructs": "^10.3.0"
   },
   "dependencies": {
-    "cdk8s-plus-27": "^2.7.63"
+    "cdk8s-plus-27": "^2.7.64"
   },
   "resolutions": {
     "@types/babel__traverse": "7.18.2",
