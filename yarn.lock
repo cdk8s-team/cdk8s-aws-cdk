@@ -1542,9 +1542,9 @@ available-typed-arrays@^1.0.5:
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 aws-cdk-lib@^2.108.1:
-  version "2.110.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.110.0.tgz#5af2a933a834b9efe3b99abf2c28adbd93f89547"
-  integrity sha512-4IxjdtaoGjQPqtFyYXG6kOs9t/UTAh06tlGyCPpvhTZNoKNFUkku3H6MArlazpiKtm+dThdF+p5lQLB/kIu/qw==
+  version "2.110.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.110.1.tgz#3bbe61ec03b73da390ae5718060385c26333749d"
+  integrity sha512-Z+42Jc/KSKFdBOpEv4LK9tz6kQUdVvUBquIYhLajam3aGblkonM0/FgexvAqy8iGwUaVEIpVyBTZUP2/VUMalg==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.201"
     "@aws-cdk/asset-kubectl-v20" "^2.1.2"
@@ -1881,9 +1881,9 @@ cdk8s-plus-27@^2.7.66:
     backport "8.5.0"
 
 cdk8s@^2.68.4:
-  version "2.68.9"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.68.9.tgz#d1c59d780f34b06a2ecd91c5e8b8ad9d54fc972b"
-  integrity sha512-pQ9nmKtW/pYMygM58ilyvrpatcxuUiW+pSJWeEB9FduRbXwkNy1Ep6xz47IBwOPgqwjNdlOYrIGQ++zbQ5Jk5g==
+  version "2.68.10"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.68.10.tgz#693aa5a9b39e285a26b39f8b1e0a19d7306aafe1"
+  integrity sha512-y0ZwGvWln5y0hc/8NmB/GBjy4AIbvXhztfnncLhhPz9FWy1B6VjEi3LRLT3OrPwtONWKOmWe6d5KwideevBsrw==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
