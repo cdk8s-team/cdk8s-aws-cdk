@@ -345,13 +345,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=peer,prod,optional --filter=aws-cdk-lib,cdk8s,constructs,cdk8s-plus-27"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=prod,optional --filter=cdk8s-plus-27"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade aws-cdk-lib cdk8s constructs cdk8s-plus-27"
+          "exec": "yarn upgrade cdk8s-plus-27"
         },
         {
           "exec": "npx projen"
