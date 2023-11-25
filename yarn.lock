@@ -1563,10 +1563,10 @@ case@1.6.3, case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s-plus-27@^2.7.67:
-  version "2.7.67"
-  resolved "https://registry.yarnpkg.com/cdk8s-plus-27/-/cdk8s-plus-27-2.7.67.tgz#1d0ccc9a682ee451337b843db0a11d086b556714"
-  integrity sha512-Sun5os2yvQBbZxy/5VMLFHAMPjD8yqvmWSFrFbuctkzKGfV3UxcVGliLLS23eQW7VxbfFVb6wvMd7I6Tbos2bg==
+cdk8s-plus-27@^2.7.69:
+  version "2.7.69"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-27/-/cdk8s-plus-27-2.7.69.tgz#a0e3a638f8d7962587911e1cd62cc4c529978841"
+  integrity sha512-xeyrb4cRe4IYzCvTyuhLFxQWiV2bN14/FFvE+H5eNVaXt8x57G/CRK8ZF0inWhDJPXEYi/35WQw2JQSxkVJ3mA==
   dependencies:
     minimatch "^3.1.2"
   optionalDependencies:
@@ -1633,9 +1633,9 @@ cli-cursor@^3.1.0:
     restore-cursor "^3.1.0"
 
 cli-spinners@^2.5.0:
-  version "2.9.1"
-  resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-2.9.1.tgz#9c0b9dad69a6d47cbb4333c14319b060ed395a35"
-  integrity sha512-jHgecW0pxkonBJdrKsqxgRX9AcG+u/5k0Q7WPDfi8AogLAdwxEkyYYNWwZ5GvVFoFx2uiY1eNcSK00fh+1+FyQ==
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-2.9.2.tgz#1773a8f4b9c4d6ac31563df53b3fc1d79462fe41"
+  integrity sha512-ywqV+5MmyL4E7ybXgKys4DugZbX0FC6LnwrhjuykIjnK9k8OQacQ7axGKnjDXWNhns0xot3bZI5h55H8yo9cJg==
 
 cli-width@^3.0.0:
   version "3.0.0"
