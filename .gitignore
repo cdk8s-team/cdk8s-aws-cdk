@@ -31,7 +31,6 @@ jspm_packages/
 *.tgz
 .yarn-integrity
 .cache
-!/.projenrc.js
 /test-reports/
 junit.xml
 /coverage/
@@ -68,3 +67,4 @@ tsconfig.json
 !/.github/workflows/upgrade-compiler-dependencies-main.yml
 /examples/rds-db-instance/cdk.out/**
 !/examples/rds-db-instance/cdk.out/*.template.json
+!/.projenrc.js
