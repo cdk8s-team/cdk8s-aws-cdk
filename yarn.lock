@@ -1576,10 +1576,10 @@ case@1.6.3, case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s-plus-27@^2.9.4:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/cdk8s-plus-27/-/cdk8s-plus-27-2.9.4.tgz#c71bc7521b3876d4314cf4e0bd482252e36279db"
-  integrity sha512-8bUxDnTlgASY8rlWfkBhQXF5M28LjuU+2YyHzYyv2QtPS7A25z8dOsGokPEMPpq6uzLguEbdv5dWG5a67kklgw==
+cdk8s-plus-27@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-27/-/cdk8s-plus-27-2.9.5.tgz#a2d7942a7aba001c0a07705627314d780cde7265"
+  integrity sha512-vZtq6BHIi3wFdzxd8LFmKiWIb3sFjV9kFpJ3bN2sOZiQYHoirN0UUlB04n2YMA7u97wJZPc521ZJGUyDBUhupQ==
   dependencies:
     minimatch "^3.1.2"
   optionalDependencies:
