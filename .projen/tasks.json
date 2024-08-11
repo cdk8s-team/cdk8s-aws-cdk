@@ -351,13 +351,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=prod,optional --filter=cdk8s-plus-27"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=prod,optional --filter=cdk8s-plus-28"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade cdk8s-plus-27"
+          "exec": "yarn upgrade cdk8s-plus-28"
         },
         {
           "exec": "npx projen"
