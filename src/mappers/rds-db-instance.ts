@@ -1,6 +1,6 @@
 import { aws_rds as rds } from 'aws-cdk-lib';
 import * as k from 'cdk8s';
-import * as kplus from 'cdk8s-plus-27';
+import * as kplus from 'cdk8s-plus-28';
 import * as base from './base';
 import * as krdsdbinstances from '../imports/rdsdbinstances-rds.services.k8s.aws';
 
