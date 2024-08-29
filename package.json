@@ -68,7 +68,7 @@
     "constructs": "^10.3.0"
   },
   "dependencies": {
-    "cdk8s-plus-28": "^2.5.1"
+    "cdk8s-plus-28": "^2.5.2"
   },
   "resolutions": {
     "@types/babel__traverse": "7.18.2",
