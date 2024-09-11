@@ -1000,7 +1000,7 @@ Returns a string representation of this construct.
 ##### `addDependency` <a name="addDependency" id="cdk8s-aws-cdk.Chart.addDependency"></a>
 
 ```typescript
-public addDependency(dependencies: IConstruct): void
+public addDependency(dependencies: ...IConstruct[]): void
 ```
 
 Create a dependency between this Chart and other constructs.
@@ -1009,7 +1009,7 @@ These can be other ApiObjects, Charts, or custom.
 
 ###### `dependencies`<sup>Required</sup> <a name="dependencies" id="cdk8s-aws-cdk.Chart.addDependency.parameter.dependencies"></a>
 
-- *Type:* constructs.IConstruct
+- *Type:* ...constructs.IConstruct[]
 
 the dependencies to add.
 
