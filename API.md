@@ -44,7 +44,7 @@ new AwsCdkAdapater(scope: Construct, id: string, props: AwsCdkAdapterProps)
 | --- | --- |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.toString">toString</a></code> | Returns a string representation of this construct. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addDependency">addDependency</a></code> | Add a dependency between this stack and another stack. |
-| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addMetadata">addMetadata</a></code> | Adds an arbitary key-value pair, with information you want to record about the stack. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addMetadata">addMetadata</a></code> | Adds an arbitrary key-value pair, with information you want to record about the stack. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.addTransform">addTransform</a></code> | Add a Transform to this stack. A Transform is a macro that AWS CloudFormation uses to process your template. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.exportStringListValue">exportStringListValue</a></code> | Create a CloudFormation Export for a string list value. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapater.exportValue">exportValue</a></code> | Create a CloudFormation Export for a string value. |
@@ -100,7 +100,7 @@ app, and also supports nested stacks.
 public addMetadata(key: string, value: any): void
 ```
 
-Adds an arbitary key-value pair, with information you want to record about the stack.
+Adds an arbitrary key-value pair, with information you want to record about the stack.
 
 These get translated to the Metadata section of the generated template.
 
@@ -208,8 +208,6 @@ temporarily ensure that the CloudFormation Export still exists while you
 remove the reference from the consuming stack. After that, you can remove
 the resource and the manual export.
 
-## Example
-
 Here is how the process works. Let's say there are two stacks,
 `producerStack` and `consumerStack`, and `producerStack` has a bucket
 called `bucket`, which is referenced by `consumerStack` (perhaps because
@@ -220,7 +218,7 @@ deleted, `consumerStack` might still be using it.
 
 Instead, the process takes two deployments:
 
-### Deployment 1: break the relationship
+**Deployment 1: break the relationship**:
 
 - Make sure `consumerStack` no longer references `bucket.bucketName` (maybe the consumer
   stack now uses its own bucket, or it writes to an AWS DynamoDB table, or maybe you just
@@ -230,7 +228,7 @@ Instead, the process takes two deployments:
   between the two stacks is being broken.
 - Deploy (this will effectively only change the `consumerStack`, but it's safe to deploy both).
 
-### Deployment 2: remove the bucket resource
+**Deployment 2: remove the bucket resource**:
 
 - You are now free to remove the `bucket` resource from `producerStack`.
 - Don't forget to remove the `exportValue()` call as well.
@@ -1214,6 +1212,7 @@ const awsCdkAdapterProps: AwsCdkAdapterProps = { ... }
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.crossRegionReferences">crossRegionReferences</a></code> | <code>boolean</code> | Enable this flag to allow native cross region stack references. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.description">description</a></code> | <code>string</code> | A description of the stack. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.env">env</a></code> | <code>aws-cdk-lib.Environment</code> | The AWS environment (account/region) where this stack will be deployed. |
+| <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.notificationArns">notificationArns</a></code> | <code>string[]</code> | SNS Topic ARNs that will receive stack events. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.permissionsBoundary">permissionsBoundary</a></code> | <code>aws-cdk-lib.PermissionsBoundary</code> | Options for applying a permissions boundary to all IAM Roles and Users created within this Stage. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.stackName">stackName</a></code> | <code>string</code> | Name to deploy the stack with. |
 | <code><a href="#cdk8s-aws-cdk.AwsCdkAdapterProps.property.suppressTemplateIndentation">suppressTemplateIndentation</a></code> | <code>boolean</code> | Enable this flag to suppress indentation in generated CloudFormation templates. |
@@ -1341,6 +1340,19 @@ new YourStack(myStage, 'Stack2');
 new MyStack(app, 'Stack1');
 ```
 
+
+##### `notificationArns`<sup>Optional</sup> <a name="notificationArns" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.notificationArns"></a>
+
+```typescript
+public readonly notificationArns: string[];
+```
+
+- *Type:* string[]
+- *Default:* no notfication arns.
+
+SNS Topic ARNs that will receive stack events.
+
+---
 
 ##### `permissionsBoundary`<sup>Optional</sup> <a name="permissionsBoundary" id="cdk8s-aws-cdk.AwsCdkAdapterProps.property.permissionsBoundary"></a>
 
