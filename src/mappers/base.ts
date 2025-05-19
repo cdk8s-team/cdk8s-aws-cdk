@@ -18,7 +18,7 @@ export interface CloudFormationMapperExportMapping {
 
 export enum CloudFormationMapperRefMapping {
   NAME = 'name',
-  ARN = 'arn'
+  ARN = 'arn',
 }
 
 export abstract class CloudFormationResourceMapper {

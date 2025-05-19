@@ -25,6 +25,9 @@ const project = new Cdk8sTeamJsiiProject({
   tsconfig: {
     include: ['examples/**/*.ts'],
   },
+  eslintOptions: {
+    ignorePatterns: ['src/imports/*.ts'],
+  },
 });
 
 for (const example of ['rds-db-instance']) {
