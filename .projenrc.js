@@ -1,4 +1,5 @@
 const { Cdk8sTeamJsiiProject } = require('@cdk8s/projen-common');
+const { javascript } = require('projen');
 
 const project = new Cdk8sTeamJsiiProject({
   name: 'cdk8s-aws-cdk',
@@ -22,9 +23,6 @@ const project = new Cdk8sTeamJsiiProject({
     'aws-cdk-lib',
     'constructs',
   ],
-  tsconfig: {
-    include: ['examples/**/*.ts'],
-  },
   eslintOptions: {
     ignorePatterns: ['src/imports/*.ts'],
   },
@@ -32,12 +30,27 @@ const project = new Cdk8sTeamJsiiProject({
 
 for (const example of ['rds-db-instance']) {
   const exampleDir = `examples/${example}`;
+
+  new javascript.TypescriptConfig(project, {
+    fileName: `${exampleDir}/tsconfig.json`,
+    extends: javascript.TypescriptConfigExtends.fromTypescriptConfigs([project.tsconfig]),
+    compilerOptions: {
+      rootDir: '../../', // need the package source as well here
+    },
+    include: [
+      '../../src/**/*.ts',
+      '**/*.ts',
+    ],
+  });
+
   const synth = project.addTask(`synth:${example}`);
   project.gitignore.exclude(`/${exampleDir}/cdk.out/**`);
   project.gitignore.include(`/${exampleDir}/cdk.out/*.template.json`);
-  synth.exec('ts-node --project ../../tsconfig.dev.json main.ts', { cwd: exampleDir });
-  // example currently fails to compile, need to look into it
-  // project.compileTask.spawn(synth);
+  // example currently fails to synth, need to look into it
+  // synth.exec('ts-node --project tsconfig.json main.ts', { cwd: exampleDir });
+  // for now doing a compile instead
+  synth.exec('tsc --noEmit', { cwd: exampleDir });
+  project.compileTask.spawn(synth);
 }
 
 project.synth();

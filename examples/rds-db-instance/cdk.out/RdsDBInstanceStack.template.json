@@ -13,15 +13,15 @@
   "PostgreSQLDatabaseInstanceECD6DE4B": {
    "Type": "AWS::RDS::DBInstance",
    "Properties": {
-    "DBInstanceClass": "db.m5.large",
     "AllocatedStorage": "100",
     "CopyTagsToSnapshot": true,
+    "DBInstanceClass": "db.m5.large",
     "DBSubnetGroupName": {
      "Ref": "PostgreSQLDatabaseInstanceSubnetGroup3673DBAE"
     },
     "Engine": "postgres",
-    "MasterUsername": "postgres",
     "MasterUserPassword": "password",
+    "MasterUsername": "postgres",
     "StorageType": "gp2",
     "VPCSecurityGroups": [
      "sg-022f93d53709f83b2"
