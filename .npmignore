@@ -20,5 +20,6 @@ dist
 tsconfig.tsbuildinfo
 /.eslintrc.json
 !.jsii
+/examples/rds-db-instance/tsconfig.json
 /.gitattributes
 /.projenrc.js

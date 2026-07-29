@@ -115,6 +115,9 @@
       "steps": [
         {
           "exec": "jsii --silence-warnings=reserved-word"
+        },
+        {
+          "spawn": "synth:rds-db-instance"
         }
       ]
     },
@@ -269,7 +272,7 @@
       "name": "synth:rds-db-instance",
       "steps": [
         {
-          "exec": "ts-node --project ../../tsconfig.dev.json main.ts",
+          "exec": "tsc --noEmit",
           "cwd": "examples/rds-db-instance"
         }
       ]

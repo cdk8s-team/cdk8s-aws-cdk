@@ -22,6 +22,7 @@
     ".projen/tasks.json",
     "CODE_OF_CONDUCT.md",
     "DCO",
+    "examples/rds-db-instance/tsconfig.json",
     "git-hooks/prepare-commit-msg",
     "git-hooks/README.md",
     "git-hooks/setup.sh",

@@ -27,6 +27,7 @@
 /API.md linguist-generated
 /CODE_OF_CONDUCT.md linguist-generated
 /DCO linguist-generated
+/examples/rds-db-instance/tsconfig.json linguist-generated linguist-language=JSON-with-Comments
 /git-hooks/prepare-commit-msg linguist-generated
 /git-hooks/README.md linguist-generated
 /git-hooks/setup.sh linguist-generated
