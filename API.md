@@ -4,6 +4,8 @@
 
 ### AwsCdkAdapater <a name="AwsCdkAdapater" id="cdk8s-aws-cdk.AwsCdkAdapater"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable, aws-cdk-lib.ITaggable
+
 #### Initializers <a name="Initializers" id="cdk8s-aws-cdk.AwsCdkAdapater.Initializer"></a>
 
 ```typescript
@@ -963,6 +965,8 @@ Whether termination protection is enabled for this stack.
 
 
 ### Chart <a name="Chart" id="cdk8s-aws-cdk.Chart"></a>
+
+- *Implements:* constructs.IConstruct, constructs.IDependable
 
 #### Initializers <a name="Initializers" id="cdk8s-aws-cdk.Chart.Initializer"></a>
 
